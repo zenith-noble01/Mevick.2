@@ -1,0 +1,37 @@
+.featured {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.featuredItems {
+  flex: 1;
+  margin: 0 20px;
+  padding: 30px;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.featuredTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.featureStudentContainer {
+  margin: 10px 0;
+  align-items: center;
+  display: flex;
+}
+
+.featureStudent {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.featuredStudentRate {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}

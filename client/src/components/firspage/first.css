@@ -1,0 +1,42 @@
+.first {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(../images/assembly.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+
+.firstContainer {
+  height: calc(100vh - 60px);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .btnContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1vh;
+  width: 100%;
+} */
+
+.firstContainer button {
+  padding: 8px 30px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  transition: 0.5s ease;
+  color: white;
+  margin-top: 29px;
+}
+
+.firstContainer button:hover {
+  background: white;
+  color: black;
+}

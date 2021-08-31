@@ -1,0 +1,77 @@
+.winsm {
+  flex: 1;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.winsmTitile {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.winsmImg {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.winsmLink {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.winsmLink::-webkit-scrollbar {
+  width: 7px;
+}
+
+.winsmLink::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.winsmLink::-webkit-scrollbar-track {
+  background: whitesmoke;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.winsmLinkItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.winsmUserToken {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+}
+
+.winsmUserName {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.winsmUserProffession {
+  font-size: 12px;
+  color: gray;
+}
+.winNet {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #eeeef7;
+  color: #555;
+}
+
+.winNetIcons {
+  font-size: 17px !important;
+  margin-right: 5px;
+}

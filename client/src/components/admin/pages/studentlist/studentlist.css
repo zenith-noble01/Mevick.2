@@ -1,0 +1,7 @@
+.studentList {
+  flex: 1;
+}
+
+.studentListContainer {
+  display: flex;
+}

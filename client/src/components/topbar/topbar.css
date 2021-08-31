@@ -1,0 +1,51 @@
+.topbar {
+  background: transparent;
+  height: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.topbarLinks {
+  display: flex;
+}
+.topbarLeft {
+  display: flex;
+  align-items: center;
+}
+.topbarLeft img {
+  width: 40px;
+  margin-right: 5px;
+}
+
+.topbarRightLinks {
+  display: flex;
+  margin: 0 10px;
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  transition: 0.5s ease;
+}
+
+.topbarRightLinks:hover {
+  /* background: rgb(59, 5, 12); */
+  background: black;
+  color: white;
+  /* border-radius: 5px; */
+}
+
+.topbarLeft {
+  cursor: pointer;
+}
+
+.topbarProfilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}

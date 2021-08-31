@@ -1,0 +1,47 @@
+.campus {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.campus h4 {
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}
+.campusContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.campusCont {
+  position: relative;
+}
+
+.campusCont {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.campusCont img {
+  height: 200px;
+  width: 350px;
+  object-fit: contain;
+}
+
+.div {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.div:hover {
+  opacity: 1;
+}
