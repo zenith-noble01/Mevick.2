@@ -24,11 +24,10 @@
 
 .sidebarlinks {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   list-style: none;
   padding: 5px;
   cursor: pointer;
-  margin: 10px 10px;
 }
 
 .sidebarlinks.active {
