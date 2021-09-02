@@ -6,6 +6,7 @@ import Admin from './components/admin/Admin'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Main from './components/main/Main'
 import NotFound from './components/NotFound/NotFound'
+import About from './components/about/About.'
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
         </Route>
         <Route path="/post">
           <Post />
+        </Route>
+        <Route path="/about">
+          <About />
         </Route>
         <Route path="*">
           <NotFound />
