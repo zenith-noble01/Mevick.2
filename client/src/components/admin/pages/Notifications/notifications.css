@@ -1,0 +1,7 @@
+.notifications {
+  flex: 1;
+}
+
+.notificationContainer {
+  display: flex;
+}

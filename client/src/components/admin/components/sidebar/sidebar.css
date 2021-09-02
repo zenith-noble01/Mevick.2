@@ -24,13 +24,25 @@
 
 .sidebarlinks {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   list-style: none;
   padding: 5px;
+  margin-left: 10px;
   cursor: pointer;
+}
+
+.td {
+  text-decoration: none;
+  color: gray;
 }
 
 .sidebarlinks.active {
   background: rgb(208, 208, 233);
   border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
 }

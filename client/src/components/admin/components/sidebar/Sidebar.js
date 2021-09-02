@@ -19,7 +19,7 @@ const Sidebar = () => {
                     <h3 className="sidebarTitle">Quick Menu</h3>
                     <ul className="sidebatList">
                         <li className="sidebarlinks ">
-                            <Link to='/studentlist'>
+                            <Link to='/studentlist' className="td">
                                Students
                             </Link>
                         </li>
