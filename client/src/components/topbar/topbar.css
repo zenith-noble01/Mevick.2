@@ -22,6 +22,10 @@
   margin-right: 5px;
 }
 
+.myabout {
+  text-decoration: none;
+  color: white;
+}
 .topbarRightLinks {
   display: flex;
   margin: 0 10px;

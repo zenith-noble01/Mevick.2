@@ -1,5 +1,5 @@
 import "./topbar.css"
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import logo from '../images/logo.png'
 
 const Topbar = () => {
@@ -12,7 +12,9 @@ const Topbar = () => {
       <div className="topbarRight">
         <ul className="topbarLinks">
           <li className="topbarRightLinks">Home</li>
-          <li className="topbarRightLinks">About</li>
+          <Link to="/about" className="myabout">
+            <li className="topbarRightLinks">About</li>
+          </Link>
           <li className="topbarRightLinks">Contact</li>
         </ul>
       </div>
