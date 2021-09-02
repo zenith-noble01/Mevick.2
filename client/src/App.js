@@ -5,6 +5,7 @@ import Notifications from './components/admin/pages/Notifications/Notification'
 import Admin from './components/admin/Admin'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Main from './components/main/Main'
+import NotFound from './components/NotFound/NotFound'
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/post">
           <Post />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>

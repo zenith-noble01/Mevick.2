@@ -1,0 +1,26 @@
+.notfound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(192, 191, 191);
+}
+
+.notfoundContainer {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.mev {
+  font-size: 55px;
+  font-weight: 900;
+}
