@@ -1,0 +1,65 @@
+.notfound {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: rgb(192, 191, 191);
+}
+
+.notfoundContainer {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.mev {
+  font-size: 55px;
+  font-weight: 900;
+}
+
+.backTohome {
+  text-decoration: none;
+  color: black;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.5s ease;
+}
+
+.notfoundImg {
+  width: 200px;
+}
+
+.backTohome:hover {
+  background: black;
+  color: rgb(192, 191, 191);
+}
+
+.notBack {
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .notfoundImg {
+    width: 50px;
+  }
+  .notfoundContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .mev {
+    font-size: 25px;
+  }
+}
