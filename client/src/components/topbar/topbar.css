@@ -5,7 +5,7 @@
   width: 100%;
   justify-content: space-around;
   align-items: center;
-  z-index: 100;
+  z-index: 999;
   position: sticky;
   top: 0;
 }
@@ -52,4 +52,10 @@
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .topbarRight {
+    display: none;
+  }
 }
