@@ -1,0 +1,137 @@
+.contact {
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.contactLeft {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  background: rgb(63, 13, 13);
+  color: white;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.contactLeftInfo {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.LogoDes {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.backToHome {
+  padding: 10px 40px;
+  cursor: pointer;
+  background: white;
+  transition: 0.5s ease;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+.backToHome:hover {
+  background: rgb(214, 212, 212);
+}
+
+.contactRight {
+  width: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.username {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.username input {
+  height: 40px;
+  border: none;
+  padding: 0 10px;
+  width: 60%;
+  outline: none;
+  background: rgb(63, 13, 13);
+  color: white;
+  border-radius: 5px;
+}
+
+.usernameMessage {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usernameMessage textarea {
+  border: none;
+  padding: 15px 10px;
+  width: 60%;
+  outline: none;
+  resize: none;
+  background: rgb(63, 13, 13);
+  height: 200px;
+  color: white;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.rightBtn {
+  padding: 10px 60px;
+  margin-top: 10px;
+  border: none;
+  background: rgb(63, 13, 13);
+  color: white;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-radius: 5px;
+}
+
+.rightBtn:hover {
+  background: rgb(77, 18, 18);
+}
+
+.username input::placeholder {
+  color: white;
+}
+
+.usernameMessage textarea::placeholder {
+  color: white;
+}
+@media (max-width: 700px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contactLeft,
+  .contactRight {
+    width: 100%;
+  }
+
+  .contactLeft {
+    height: 50vh;
+  }
+  .contactRight {
+    height: 100vh;
+  }
+  .username input {
+    width: 90%;
+  }
+  .usernameMessage textarea {
+    width: 90%;
+  }
+}

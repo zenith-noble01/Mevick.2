@@ -7,6 +7,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Main from './components/main/Main'
 import NotFound from './components/NotFound/NotFound'
 import About from './components/about/About.'
+import Contact from './components/Contact/Contact'
+import Blog from './components/blog/Blog'
 
 function App() {
   return (
@@ -32,6 +34,12 @@ function App() {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/blog">
+          <Blog />
         </Route>
         <Route path="*">
           <NotFound />
