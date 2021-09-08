@@ -1,5 +1,6 @@
 import "./first.css"
 import Topbar from '../topbar/Topbar'
+import { Link } from 'react-router-dom'
 
 const First = () => {
     return (
@@ -8,17 +9,10 @@ const First = () => {
             <div className="firstContainer">
                 <h1>Mevick Bilingual Grammer School</h1>
                 <h4>Knowledge-Hardwork-Success</h4>
-               <button>Contact</button>
+                <Link to="/contact">
+                   <button>Contact</button>
+                </Link>
             </div>
-            {/* <div className="btnContact">
-            </div> */}
-
-            {/* <div className="socialMedia">
-                <p>facebook</p>
-                <p>facebook</p>
-                <p>facebook</p>
-                <p>facebook</p>
-            </div> */}
         </div>
     )
 }

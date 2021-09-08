@@ -1,3 +1,19 @@
 .abssidebar {
   flex: 1;
+  height: 100vh;
+  padding: 30px 20px;
+  background: blue;
+}
+
+.abssidebarTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.abssidebarMobile {
+  width: 80px;
+  height: 100vh;
+  background: blue;
 }
