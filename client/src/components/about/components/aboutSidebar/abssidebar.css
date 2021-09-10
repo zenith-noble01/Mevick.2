@@ -1,8 +1,8 @@
 .abssidebar {
   flex: 1;
   height: 100vh;
-  padding: 30px 20px;
-  background: blue;
+  padding: 10px 20px;
+  background: rgb(208, 208, 233);
 }
 
 .abssidebarTop {
@@ -16,4 +16,55 @@
   width: 80px;
   height: 100vh;
   background: blue;
+}
+
+.absidebarTop {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.abssidebarTopTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.absidebarImg {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.div1 {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+}
+
+.absidebarTop > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.sidebarInput {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  background: rgb(208, 208, 223);
+  border: 1px solid gray;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.sidebarInput > input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.searchIcon {
+  margin: 0 10px;
+  color: gray;
+  font-size: 15px;
 }

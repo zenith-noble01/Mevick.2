@@ -1,11 +1,11 @@
-import "./acen.css"
+import "./abcenter.css"
 
-const Center = () => {
-    return (
-        <div className="center">
-            am the center
-        </div>
-    )
+const Abscenter = () => {
+  return (
+    <div className="abscenter">
+      am the center
+    </div>
+  )
 }
 
-export default Center
+export default Abscenter
