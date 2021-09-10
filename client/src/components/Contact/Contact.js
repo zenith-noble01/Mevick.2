@@ -28,14 +28,13 @@ const Contact = () => {
          xhr.setRequestHeader('content-type', 'application/json')
          xhr.onload = function(){
         console.log(xhr.responseText);
-        if(xhr.responseText == 'success'){
+        if(xhr.responseText === 'success'){
             alert('message sent')
         }
         else{
             alert('something went wrong bro/ sis')
         }
     }
-
     xhr.send(JSON.stringify(mail))
     }
     

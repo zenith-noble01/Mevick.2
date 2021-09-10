@@ -11,10 +11,14 @@ const AbSidebar = () => {
                 <div className="div1">
                     <Link to="/" className="div1">
                     <img src={logo} className="
-                    absidebarImg"/>
+                    absidebarImg" alt="the mevick logo"/>
                     <span className="abssidebarTopTitle">MEVICK</span>
                     </Link>
                 </div>
+            </div>
+            <div className="sidebarInput">
+                <i className="searchIcon fa fa-search"></i>
+                <input type="text" placeholder="Search" />
             </div>
         </div>
     )

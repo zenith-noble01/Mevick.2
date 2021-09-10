@@ -46,3 +46,23 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.sidebarInput {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  background: rgb(208, 208, 223);
+  border: 1px solid gray;
+  height: 40px;
+}
+
+.sidebarInput > input {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.searchIcon {
+  margin: 0 10px;
+  color: gray;
+}
