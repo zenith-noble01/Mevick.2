@@ -54,6 +54,7 @@
   background: rgb(208, 208, 223);
   border: 1px solid gray;
   height: 40px;
+  border-radius: 5px;
 }
 
 .sidebarInput > input {
@@ -65,4 +66,5 @@
 .searchIcon {
   margin: 0 10px;
   color: gray;
+  font-size: 15px;
 }
