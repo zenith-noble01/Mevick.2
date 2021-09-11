@@ -68,3 +68,44 @@
   color: gray;
   font-size: 15px;
 }
+
+li {
+  list-style: none;
+}
+
+.sidebarItemList,
+.sidebarItemList1 {
+  list-style: none;
+  color: #444;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.sidebarItemList1 {
+  margin: 0;
+  padding: 10px 5px;
+  background: rgb(207, 207, 207);
+}
+
+.chev {
+  align-self: flex-end;
+}
+.dropdownList {
+  border-left: 1px solid gray;
+  box-sizing: border-box;
+  padding-left: 20px;
+  color: #444;
+}
+
+.dropdownItem {
+  cursor: pointer;
+}
+
+.drop {
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+
+.sidbarDropIcon {
+  margin-right: 10px;
+}
