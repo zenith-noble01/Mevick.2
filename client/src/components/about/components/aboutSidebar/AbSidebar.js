@@ -25,7 +25,7 @@ const AbSidebar = () => {
             </div>
             <div className="sidebarWrapper">
                 <ul className="sidebarItem">
-                    <li className="sidebarItemList1" onClick={() => setSidebarDropdown(!sidebarDropdown)}> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-down' : "chev fas fa-chevron-up"}></i></li>
+                    <li className="sidebarItemList1" onClick={() => setSidebarDropdown(!sidebarDropdown)}><i className="sidbarDropIcon fas fa-university"></i> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-down' : "chev fas fa-chevron-up"}></i></li>
                     <ul className={sidebarDropdown ? "drop" : "dropdownList"}>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-book-open"></i>Library</li>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-flask"></i>Labs</li>
@@ -33,7 +33,10 @@ const AbSidebar = () => {
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-cookie-bite"></i>Cantine</li>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-binoculars"></i>Overview</li>
                     </ul>
-                    <li className="sidebarItemList">zenith</li>
+                    <li className="sidebarItemList">School</li>
+                    <li className="sidebarItemList">Past Result</li>
+                    <li className="sidebarItemList">Location</li>
+                    <li className="sidebarItemList">registration</li>
                 </ul>
             </div>
         </div>

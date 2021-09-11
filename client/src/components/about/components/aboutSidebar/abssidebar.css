@@ -84,21 +84,26 @@ li {
 .sidebarItemList1 {
   margin: 0;
   padding: 10px 5px;
-  background: rgb(207, 207, 207);
+  background: rgb(182, 181, 181);
 }
 
 .chev {
-  align-self: flex-end;
+  float: right;
+  margin-right: 20px;
+  align-items: center;
+  margin-top: 5px;
 }
 .dropdownList {
   border-left: 1px solid gray;
   box-sizing: border-box;
   padding-left: 20px;
   color: #444;
+  margin-left: 15px;
 }
 
 .dropdownItem {
   cursor: pointer;
+  margin: 10px 0;
 }
 
 .drop {
