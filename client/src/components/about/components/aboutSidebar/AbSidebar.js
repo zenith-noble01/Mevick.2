@@ -33,7 +33,10 @@ const AbSidebar = () => {
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-cookie-bite"></i>Cantine</li>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-binoculars"></i>Overview</li>
                     </ul>
-                    <li className="sidebarItemList">zenith</li>
+                    <li className="sidebarItemList">School</li>
+                    <li className="sidebarItemList">Past Result</li>
+                    <li className="sidebarItemList">Location</li>
+                    <li className="sidebarItemList">registration</li>
                 </ul>
             </div>
         </div>
