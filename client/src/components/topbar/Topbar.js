@@ -6,6 +6,7 @@ import logo from '../images/logo.png'
 const Topbar = () => {
 
   const [isMobile, setIsMobile] = useState(false)
+  const [drop, setDrop] = useState(true)
 
   return (
     <div className='topbar'>
@@ -14,24 +15,38 @@ const Topbar = () => {
         <h3>MEVICK</h3>
       </div>
       <div className="topbarRight">
-        <ul className={isMobile ? "topbarLinks__Moblie" : "topbarLinks"}
-         onClick={() => setIsMobile(false)} >
+        <ul className={isMobile ? "topbarLinks__Moblie" : "topbarLinks"} >
           <Link to="/" className="myabout">
-          <li className="topbarRightLinks">Home</li>
+          <li className="topbarRightLinks"  onClick={() => setIsMobile(false)}>Home</li>
           </Link>
           <Link to="/about" className="myabout">
-            <li className="topbarRightLinks">About</li>
+            <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
           </Link>
           <Link to="/contact" className="myabout"> 
-               <li className="topbarRightLinks">Contact</li>
+               <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
           </Link>
           <Link to="/blog" className="myabout"> 
-               <li className="topbarRightLinks">News</li>
+               <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>News</li>
           </Link>
+          <div className="notnow">
+           <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
+          <ul className={drop ? "dropListLogin" : 'dropList'} onClick={() => setDrop(true)}>
+            <Link to="/adminLogin" className="myaboutl">
+            <li className="dropListItem">Admin</li>
+            </Link>
+            <li className="dropListItem">Student</li>
+          </ul>
+          </div>
         </ul>
       </div>
       <div className="topbarProfile">
-        <img src={logo} alt="" className="topbarProfilePic"/>
+          <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
+          <ul className={drop ? "dropListLogin" : 'dropList'} >
+            <Link to="/adminLogin" className="myaboutl">
+            <li className="dropListItem">Admin</li>
+            </Link>
+            <li className="dropListItem">Student</li>
+          </ul>
       </div>
       <button className="topbarMenuIcon" onClick={() => 
         setIsMobile(!isMobile)}>

@@ -64,7 +64,42 @@
   color: white;
   font-size: 20px;
 }
+.topbarProfileList {
+  color: black;
+  cursor: pointer;
+}
 
+.dropListLogin {
+  display: none;
+}
+
+.myaboutl {
+  text-decoration: none;
+  color: inherit;
+}
+
+.notnow {
+  display: none;
+}
+.dropListItem {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dropList {
+  background: white;
+  color: black;
+  position: absolute;
+  top: 60px;
+  right: 100px;
+  padding: 20px;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  transition: 2s ease;
+}
 @media (max-width: 700px) {
   .topbarLinks {
     display: none;
@@ -76,6 +111,7 @@
     position: absolute;
     top: 60px;
     background: white;
+    padding: 20px;
     left: 0;
     transition: all 0.5s ease-in-out;
     width: 100%;
@@ -83,6 +119,26 @@
     justify-content: center;
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
+  }
+
+  .notnow {
+    display: block;
+    position: relative;
+    /* background: ; */
+    width: 100%;
+  }
+
+  .topbarProfileList {
+    text-align: center;
+  }
+  .dropList {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    display: flex;
+    right: 0;
+    background: white;
+    color: black;
   }
 
   .topbarMenuIcon {

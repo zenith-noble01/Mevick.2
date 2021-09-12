@@ -1,3 +1,95 @@
 .post {
+  display: flex;
+}
+
+.postWrapper {
   flex: 4;
+  padding: 20px;
+}
+
+.postContainer {
+  width: 100%;
+  padding: 10px;
+  background: whitesmoke;
+  border-radius: 20px;
+}
+
+.adminImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.postTop {
+  display: flex;
+  align-items: center;
+}
+
+.textcontainer {
+  width: 100%;
+}
+
+.textField {
+  resize: none;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: none;
+  margin-top: 20px;
+  outline: none;
+  padding: 0 10px;
+}
+
+.postFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.filetaker {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filetaker > img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+.filetaker > p {
+  margin-left: 10px;
+}
+
+.postBtn {
+  padding: 10px 40px;
+  background: #444;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+.postImgContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.closePost {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: red;
+  cursor: pointer;
+  font-size: 30px;
+}
+.postImgtaker {
+  width: 100%;
+  height: 400px;
+  /* object-fit: cover; */
 }

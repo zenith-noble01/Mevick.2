@@ -1,4 +1,4 @@
-import React from 'react'
+import './post.css'
 
 const post = () => {
     return (

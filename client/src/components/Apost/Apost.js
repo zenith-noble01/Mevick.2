@@ -1,6 +1,8 @@
 import "./apost.css"
 import logo from '../images/secon1.jpg'
-const Apost = () => {
+const Apost = ({post}) => {
+    
+    const PF = 'http://localhost:5000/images/';
     return (
         <div className="apost">
             <div className="blogTop">
@@ -9,12 +11,12 @@ const Apost = () => {
                 <img src={logo} alt="" />
                 <span>Admin</span>
                 </div>
-                topbeKnow
+                <p className="postdate">{new Date(post.createdAt).toDateString()}</p>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat facilis animi tempore error omnis soluta ipsa exercitationem iste mollitia dolores dignissimos, cupiditate fuga quasi esse eaque nisi numquam eos sit!</p>
+                <p>{post.desc}</p>
             </div>
             <div className="blogCenter">
-                <img src={logo} alt="" className="blogCenterImg" />
+                <img src={PF + post.img} alt="" className="blogCenterImg" />
             </div>
             <div className="blogbottom"></div>
         </div>

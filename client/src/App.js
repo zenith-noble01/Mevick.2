@@ -9,6 +9,7 @@ import NotFound from './components/NotFound/NotFound'
 import About from './components/about/About.'
 import Contact from './components/Contact/Contact'
 import Blog from './components/blog/Blog'
+import Alogin from './components/admin/pages/Login/Login'
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route path="/blog">
           <Blog />
+        </Route>
+        <Route path="/adminLogin">
+          <Alogin />
         </Route>
         <Route path="*">
           <NotFound />
