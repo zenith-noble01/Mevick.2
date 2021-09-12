@@ -9,8 +9,8 @@ const First = () => {
             <div className="firstContainer">
                 <h1>Mevick Bilingual Grammer School</h1>
                 <h4>Knowledge-Hardwork-Success</h4>
-                <Link to="/contact">
-                   <button>Contact</button>
+                <Link to="/about">
+                   <button>Learn More</button>
                 </Link>
             </div>
         </div>

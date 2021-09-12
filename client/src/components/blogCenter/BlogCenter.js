@@ -1,14 +1,12 @@
 import "./blogcenter.css"
 import Apost from "../Apost/Apost"
 
-const BlogCenter = () => {
+const BlogCenter = ({posts}) => {
     return (
         <div className="blogCenter">
-            <Apost />
-            <Apost />
-            <Apost />
-            <Apost />
-            <Apost />
+            {posts.map((p) =>(
+                <Apost post={p} />
+            ))}
         </div>
     )
 }

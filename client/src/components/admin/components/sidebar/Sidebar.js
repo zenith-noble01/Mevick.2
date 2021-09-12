@@ -42,9 +42,11 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Posts</h3>
                     <ul className="sidebatList">
+                        <Link to="/post" className="td">
                         <li className="sidebarlinks">
                             To Official Site
                         </li>
+                        </Link>
                         <li className="sidebarlinks">
                            To Teachers
                         </li>
