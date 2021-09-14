@@ -6,7 +6,7 @@ const Apost = ({post}) => {
     return (
         <div className="apost">
             <div className="blogTop">
-                <div className="blogToper">
+                <div className="blogToper"> 
                 <div className="blogTopProfile">
                 <img src={logo} alt="" />
                 <span>Admin</span>
