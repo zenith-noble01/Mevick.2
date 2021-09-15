@@ -1,5 +1,4 @@
 import "./blog.css"
-import Topbar from '../topbar/Topbar'
 import BlogCenter from "../blogCenter/BlogCenter"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
@@ -22,7 +21,6 @@ const Blog = () => {
 
     return (
         <div className="blog">
-            <Topbar />
             <div className="blogContainer">
                 <BlogCenter posts={posts} />
             </div>
