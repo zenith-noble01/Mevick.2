@@ -1,6 +1,6 @@
 .abssidebar {
   flex: 1;
-  height: 100vh;
+  height: calc(100vh - 60px);
   padding: 10px 20px;
   background: rgb(208, 208, 233);
 }

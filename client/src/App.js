@@ -10,10 +10,12 @@ import About from './components/about/About.'
 import Contact from './components/Contact/Contact'
 import Blog from './components/blog/Blog'
 import Alogin from './components/admin/pages/Login/Login'
+import Topbar from './components/topbar/Topbar'
 
 function App() {
   return (
     <Router>
+     <Topbar />
       <Switch>
         <Route exact path="/">
           <Main/>
