@@ -1,8 +1,15 @@
+.miles {
+  display: flex;
+}
 .abssidebar {
   flex: 1;
   height: calc(100vh - 60px);
   padding: 10px 20px;
   background: rgb(208, 208, 233);
+}
+
+.activesidebar {
+  flex: 4;
 }
 
 .abssidebarTop {

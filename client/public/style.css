@@ -4,3 +4,8 @@
   font-family: Poppins;
   box-sizing: border-box;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}

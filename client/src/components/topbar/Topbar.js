@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./topbar.css"
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../images/logo.png'
 
 const Topbar = () => {
@@ -16,24 +16,24 @@ const Topbar = () => {
       </div>
       <div className="topbarRight">
         <ul className={isMobile ? "topbarLinks__Moblie" : "topbarLinks"} >
-          <Link to="/" className="myabout">
+          <NavLink exact to="/" className="myabout">
           <li className="topbarRightLinks"  onClick={() => setIsMobile(false)}>Home</li>
-          </Link>
-          <Link to="/about" className="myabout">
+          </NavLink>
+          <NavLink to="/about" className="myabout">
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
-          </Link>
-          <Link to="/contact" className="myabout"> 
+          </NavLink>
+          <NavLink to="/contact" className="myabout"> 
                <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
-          </Link>
-          <Link to="/blog" className="myabout"> 
+          </NavLink>
+          <NavLink to="/blog" className="myabout"> 
                <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>News</li>
-          </Link>
+          </NavLink>
           <div className="notnow">
            <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
           <ul className={drop ? "dropListLogin" : 'dropList'} onClick={() => setDrop(true)}>
-            <Link to="/adminLogin" className="myaboutl">
+            <NavLink to="/adminLogin" className="myaboutl">
             <li className="dropListItem">Admin</li>
-            </Link>
+            </NavLink>
             <li className="dropListItem">Student</li>
           </ul>
           </div>

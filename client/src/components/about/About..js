@@ -1,12 +1,10 @@
 import './about.css'
-import AbSidebar from './components/aboutSidebar/AbSidebar'
-import Abcenter from './components/Abscneter/Abscenter'
+import Abouot from './components/aboutSidebar/AbSidebar'
 
 const About = () => {
     return (
         <div className="about">
-            <AbSidebar />
-            <Abcenter />
+            <Abouot />
         </div>
     )
 }
