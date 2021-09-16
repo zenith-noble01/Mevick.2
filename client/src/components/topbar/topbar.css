@@ -10,6 +10,11 @@
   top: 0;
 }
 
+.active {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .topbarLinks {
   display: flex;
 }
@@ -101,8 +106,7 @@
   transition: 2s ease;
 }
 
-
-.linked{
+.linked {
   background: red;
 }
 @media (max-width: 700px) {
