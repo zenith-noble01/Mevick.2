@@ -11,9 +11,11 @@ const Library = () =>{
             </p>
             <div className="helpofLibrary">
                 <p className="helpTitle">Our School Library Help Our Students In The Following Ways</p>
-                <ul>
+                <ol>
                     <li>zenith is here with the team and the others</li>
-                </ul>
+                    <li>zenith is here with the team and the others</li>
+                    <li>zenith is here with the team and the others</li>
+                </ol>
 
             </div>
         </div>
