@@ -13,10 +13,9 @@ import Decipline from '../decipline/Decipline'
 
 const AbSidebar = () => {
     const {path, url} = useRouteMatch()
-
-    // const [sidebar, setSidebar] = useState(false)
     const [sidebarDropdown, setSidebarDropdown] = useState(false)
     const [school, setSchool] = useState(false)
+    // const [active, setActive] = useState(true)
     return (
         <div className="miles">
         <div className="abssidebar">
@@ -26,7 +25,7 @@ const AbSidebar = () => {
             </div>
             <div className="sidebarWrapper">
                 <ul className="sidebarItem">
-                    <li className="sidebarItemList1" onClick={() => setSidebarDropdown(!sidebarDropdown)}><i className="sidbarDropIcon fas fa-university"></i> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li>
+                    <li className={sidebarDropdown ? "sidebarItemList1" : "inactive"} onClick={() => setSidebarDropdown(!sidebarDropdown)}><i className="sidbarDropIcon fas fa-university"></i> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li>
                     <ul className={sidebarDropdown ? "dropdownList" : "drop"}>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-book-open"></i>
                         <Link to={`${url}/library`} className="link">Library</Link>
@@ -44,7 +43,7 @@ const AbSidebar = () => {
                         <Link to={`${url}/overview`} className="link">Overview</Link>
                         </li>
                     </ul> 
-                    <li className="sidebarItemList" onClick={() => setSchool(!school)}>School</li> 
+                    <li className={school ? "sidebarItemList1" : "inactive"} onClick={() => setSchool(!school)}><i class="sidbarDropIcon fas fa-school"></i>School  <i className={school ? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li> 
                         <ul className={school ? "dropdownList" : "drop"} >
                             <li className="dropdownItem">
                                 <i class="sidbarDropIcon fas fa-users-cog"></i>
@@ -60,9 +59,9 @@ const AbSidebar = () => {
                                 <Link to={`${url}/coperative`} className="link">coperative Staff</Link>
                             </li>
                         </ul>
-                    <li className="sidebarItemList">Past Result</li>
-                    <li className="sidebarItemList">Location</li>
-                    <li className="sidebarItemList">registration</li>
+                    <li className="inactive">Past Result</li>
+                    <li className="inactive">Location</li>
+                    <li className="inactive">registration</li>
                 </ul>
             </div>
         </div>
