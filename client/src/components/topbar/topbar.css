@@ -83,6 +83,10 @@
   color: inherit;
 }
 
+.topbarProfile {
+  list-style: none;
+}
+
 .notnow {
   display: none;
 }

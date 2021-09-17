@@ -75,11 +75,14 @@
   color: gray;
   font-size: 15px;
 }
-
+/* 
 li {
   list-style: none;
-}
+} */
 
+.sidebarItem {
+  list-style: none;
+}
 .sidebarItemList,
 .sidebarItemList1 {
   list-style: none;
@@ -89,14 +92,28 @@ li {
 }
 
 .sidebarItemList1 {
-  margin: 0;
-  padding: 10px 5px;
+  margin: 10px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
   background: rgb(182, 181, 181);
+  cursor: pointer;
 }
 
+.inactive {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: rgb(193, 193, 214);
+  transition: 0.5s ease;
+}
+
+.inactive:hover {
+  background: rgb(182, 181, 181);
+}
 .chev {
   float: right;
-  margin-right: 20px;
+  margin-right: 10px;
   align-items: center;
   margin-top: 5px;
 }
@@ -106,6 +123,7 @@ li {
   padding-left: 20px;
   color: #444;
   margin-left: 15px;
+  list-style: none;
 }
 
 .dropdownItem {
@@ -115,6 +133,7 @@ li {
 
 .drop {
   display: none;
+
   transition: 0.5s ease-in-out;
 }
 

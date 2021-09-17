@@ -1,3 +1,21 @@
 .library {
-  background: blue;
+  padding: 0 20px;
+  margin-top: 10px;
+}
+
+.first1,
+.first2 {
+  margin-bottom: 15px;
+}
+
+.first1::first-letter,
+.first2::first-letter {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.helpTitle {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
