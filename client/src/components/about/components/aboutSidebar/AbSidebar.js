@@ -15,7 +15,7 @@ const AbSidebar = () => {
     const {path, url} = useRouteMatch()
     const [sidebarDropdown, setSidebarDropdown] = useState(false)
     const [school, setSchool] = useState(false)
-    const [active, setActive] = useState(false)
+    const [active] = useState(false)
     return (
         <div className="miles">
         <div className={active ? "abssidebarMobile" : "abssidebar"}>
