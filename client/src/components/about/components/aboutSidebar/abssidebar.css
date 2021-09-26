@@ -1,15 +1,27 @@
 .miles {
-  display: flex;
+  background: whitesmoke;
+  /* display: flex; */
+  width: 100%;
+  align-items: center;
 }
 .abssidebar {
-  flex: 1;
-  height: calc(100vh - 60px);
-  padding: 10px 20px;
-  background: rgb(208, 208, 233);
+  padding: 20px;
+  color: #626262;
+  position: fixed;
+  align-self: flex-start;
+  height: 100vh;
+  float: left;
+  width: 25%;
+  background: rgb(208, 208, 223);
+  /* overflow-y: scroll; */
 }
 
 .activesidebar {
   flex: 4;
+  background: rgb(208, 208, 223);
+  float: right;
+  margin: 0 auto;
+  width: 74.9%;
 }
 
 .abssidebarTop {
@@ -139,4 +151,13 @@ li {
 
 .sidbarDropIcon {
   margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  .abssidebar {
+    display: none;
+  }
+  .abssidebarMobile {
+    display: block;
+  }
 }

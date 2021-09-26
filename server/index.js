@@ -8,6 +8,7 @@ const multer = require("multer");
 const userRoute = require("./routes/user");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/post");
+const contactRoute = require("./routes/contact");
 const cors = require('cors')
 const nodemailer = require('nodemailer');
 const path = require("path");
@@ -18,7 +19,7 @@ dotenv.config();
 app.use(cors())
 
 // const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/Mevick',
+mongoose.connect('mongodb+srv://zenith:zenith@miles.f8mrs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
  {useNewUrlParser: true,
   useUnifiedTopology: true}).then(console.log('connected'));
 
@@ -79,6 +80,7 @@ app.post('/api/sendMail', (req, res)=> {
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
+app.use("/api/contact", contactRoute);
 app.listen(5000, () => {
   console.log("Backend server is running!");
 });

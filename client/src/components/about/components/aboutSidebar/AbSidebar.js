@@ -15,14 +15,15 @@ const AbSidebar = () => {
     const {path, url} = useRouteMatch()
     const [sidebarDropdown, setSidebarDropdown] = useState(false)
     const [school, setSchool] = useState(false)
-    // const [active, setActive] = useState(true)
+    const [active, setActive] = useState(false)
     return (
         <div className="miles">
-        <div className="abssidebar">
-            <div className="sidebarInput">
+        <div className={active ? "abssidebarMobile" : "abssidebar"}>
+            
+            {/* <div className="sidebarInput">
                 <i className="searchIcon fa fa-search"></i>
                 <input type="text" placeholder="Search" /> 
-            </div>
+            </div> */}
             <div className="sidebarWrapper">
                 <ul className="sidebarItem">
                     <li className={sidebarDropdown ? "sidebarItemList1" : "inactive"} onClick={() => setSidebarDropdown(!sidebarDropdown)}><i className="sidbarDropIcon fas fa-university"></i> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li>

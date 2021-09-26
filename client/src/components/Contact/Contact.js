@@ -2,7 +2,7 @@ import { useRef} from "react"
 import "./contact.css"
 import logo from '../images/logo.png'
 import { Link } from 'react-router-dom'
-// import axios from 'axios'
+import axios from 'axios'
 
 
 const Contact = () => {
@@ -16,28 +16,18 @@ const Contact = () => {
         e.preventDefault();
 
         const mail = {
-            username: name.current.value,
+            name: name.current.value,
             email: email.current.value,
             phone: phone.current.value,
             message: message.current.value,
         }
         console.log(mail);
-
-         let xhr = new XMLHttpRequest();
-         xhr.open('POST', 'http://localhost:8800/api/sendMail');
-         xhr.setRequestHeader('content-type', 'application/json')
-         xhr.onload = function(){
-        console.log(xhr.responseText);
-        if(xhr.responseText === 'success'){
-            alert('message sent')
-        }
-        else{
-            alert('something went wrong bro/ sis')
+        try {
+            await axios.post('/contact', mail)
+        } catch (error) {
+            console.log(error);
         }
     }
-    xhr.send(JSON.stringify(mail))
-    }
-    
     return (
         <div className="contact">
             <div className="contactLeft">
@@ -58,7 +48,7 @@ const Contact = () => {
                     <input type="text" placeholder="Email Address" ref={email}/>
                 </div>
                 <div className="username">
-                    <input type="text" placeholder="Phone Number" ref={phone}/>
+                    <input type="phone" placeholder="Phone Number" ref={phone}/>
                 </div>
                 <div className="usernameMessage">
                     <textarea placeholder="Message" ref={message}></textarea>

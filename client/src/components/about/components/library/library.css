@@ -1,6 +1,7 @@
 .library {
   padding: 0 20px;
   margin-top: 10px;
+  height: 100%;
 }
 
 .first1,
@@ -18,4 +19,79 @@
   text-align: center;
   font-weight: 700;
   margin-bottom: 20px;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+ol li {
+  margin: 10px 0;
+}
+
+.arrowImg {
+  color: black;
+  transform: rotate(90deg);
+  animation: zed 1s linear infinite;
+}
+
+.fa-arrow-down {
+  color: black;
+}
+
+@keyframes zed {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.imgContent {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.imgContent p {
+  font-weight: 700;
+}
+
+.imgArrow {
+  display: flex;
+  align-items: center;
+}
+
+.imgArrow p {
+  margin-right: 20px;
+}
+
+.libraryImgWrapper {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.libraryImg {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+  margin: 10px;
+}
+
+.libraryImg img {
+  height: 300px;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.libraryDec {
+  padding: 10px;
 }

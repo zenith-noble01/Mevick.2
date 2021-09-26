@@ -1,6 +1,9 @@
 import "./sidebar.css"
-import {Link} from 'react-router-dom'
+import Pusher from "../pusher/Pusher"
+import { Link, useRouteMatch, Switch, Route } from 'react-router-dom'
+import Posts from '../../pages/post/Post'
 const Sidebar = () => {
+    const {path, url} = useRouteMatch()
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
@@ -42,7 +45,7 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Posts</h3>
                     <ul className="sidebatList">
-                        <Link to="/post" className="td">
+                        <Link to={`${url}/posts`} className="td">
                         <li className="sidebarlinks">
                             To Official Site
                         </li>
@@ -53,6 +56,13 @@ const Sidebar = () => {
                     </ul>
                 </div>
             </div>
+            <Pusher>
+                <Switch>
+                    <Route path={`${path}/posts`} >
+                        <Posts />
+                    </Route>
+                </Switch>
+            </Pusher>
         </div>
     )
 }
