@@ -11,6 +11,7 @@ import Contact from './components/Contact/Contact'
 import Blog from './components/blog/Blog'
 import Alogin from './components/admin/pages/Login/Login'
 import Topbar from './components/topbar/Topbar'
+import Analytics from './components/admin/components/analytics/Analytics'
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
         </Route>
         <Route path="/adminLogin">
           <Alogin />
+        </Route>
+        <Route exact path="/analytics">
+          <Analytics />
         </Route>
         <Route path="*">
           <NotFound />
