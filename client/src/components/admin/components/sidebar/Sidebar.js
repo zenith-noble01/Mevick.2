@@ -1,20 +1,21 @@
 import "./sidebar.css"
-import Pusher from "../pusher/Pusher"
 import { Link, useRouteMatch, Switch, Route } from 'react-router-dom'
-import Posts from '../../pages/post/Post'
+import Home from '../../pages/home/Home'
+import Post from '../../pages/post/Post'
+import StudentList from '../../pages/studentlist/StudentList'
+import TeacherList from '../../pages/teacherlist/TeacherList'
+import Messages from '../../pages/messages/Messages'
 const Sidebar = () => {
     const {path, url} = useRouteMatch()
     return (
         <div className="sidebar">
             <div className="sidebarWrapper">
                 <div className="sidebarMenu">
-                    <h3 className="sidebarTitle">Dashboard</h3>
                     <ul className="sidebatList">
-                        <li className="sidebarlinks active">
-                            Home
-                        </li>
                         <li className="sidebarlinks">
-                            analytics
+                            <Link to={`${url}/dashboard`} className="link">
+                                Dashboard
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -22,12 +23,14 @@ const Sidebar = () => {
                     <h3 className="sidebarTitle">Quick Menu</h3>
                     <ul className="sidebatList">
                         <li className="sidebarlinks ">
-                            <Link to='/studentlist' className="td">
+                            <Link to={`${url}/studentList`} className="td">
                                Students
                             </Link>
                         </li>
                         <li className="sidebarlinks">
-                            Teachers
+                            <Link to={`${url}/teacherList`} className="td">
+                                Teacher
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -38,14 +41,16 @@ const Sidebar = () => {
                             Mails
                         </li>
                         <li className="sidebarlinks">
-                            Messages
+                            <Link to={`${url}/messages`} className="td">
+                                Messages
+                            </Link>
                         </li>
                     </ul>
                 </div>
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Posts</h3>
                     <ul className="sidebatList">
-                        <Link to={`${url}/posts`} className="td">
+                        <Link to={`${url}/post`} className="td">
                         <li className="sidebarlinks">
                             To Official Site
                         </li>
@@ -56,13 +61,25 @@ const Sidebar = () => {
                     </ul>
                 </div>
             </div>
-            <Pusher>
+            <div className="adminContainer">
                 <Switch>
-                    <Route path={`${path}/posts`} >
-                        <Posts />
+                    <Route path={`${path}/dashboard`}>
+                        <Home />
+                    </Route>
+                    <Route path={`${path}/post`}>
+                        <Post />
+                    </Route>
+                    <Route path={`${path}/studentList`}>
+                        <StudentList />
+                    </Route>
+                    <Route path={`${path}/teacherList`}>
+                        <TeacherList />
+                    </Route>
+                    <Route path={`${path}/messages`}>
+                        <Messages />
                     </Route>
                 </Switch>
-            </Pusher>
+            </div>
         </div>
     )
 }

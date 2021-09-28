@@ -1,0 +1,62 @@
+.messageContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 60px);
+  background: whitesmoke;
+}
+
+.messageWrapper {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.messageSidebar {
+  background: rgb(208, 208, 223);
+  height: 80vh;
+  padding: 5px;
+  flex: 1;
+}
+
+.messageContent {
+  flex: 3;
+  margin-left: 1px;
+  padding: 20px;
+  background: rgb(208, 208, 223);
+}
+
+.mess {
+  display: flex;
+  align-items: center;
+  background: rgb(7, 7, 37);
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.messName {
+  font-weight: 700;
+}
+
+.messDec {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.mess:hover {
+  background: rgb(183, 183, 199);
+}
+
+.messImg {
+  width: 50px;
+  margin-right: 10px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -1,5 +1,7 @@
 import "./apost.css"
 import logo from '../images/secon1.jpg'
+
+
 const Apost = ({post}) => {
     
     const PF = 'http://localhost:5000/images/';

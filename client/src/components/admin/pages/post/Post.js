@@ -1,5 +1,4 @@
 import "./post.css"
-import Sidebar from '../../components/sidebar/Sidebar'
 import admin from '../../../images/secon1.jpg'
 import photo from '../../../images/photo.png'
 import {useState} from 'react'
@@ -34,7 +33,6 @@ const Post = () => {
     return (
         <>
         <div className="post">
-            <Sidebar />
             <div className="postWrapper">
                 <form className="postContainer" onSubmit={handleSubmit}>
                     <div className="postTop">

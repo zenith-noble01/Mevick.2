@@ -1,4 +1,5 @@
 .post {
+  flex: 4;
   display: flex;
 }
 

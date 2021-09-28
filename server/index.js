@@ -18,8 +18,10 @@ const path = require("path");
 dotenv.config();
 app.use(cors())
 
+const PORT = process.env.PORT || 5000
+
 // const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://zenith:zenith@miles.f8mrs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect('mongodb://localhost:27017/Mevick',
  {useNewUrlParser: true,
   useUnifiedTopology: true}).then(console.log('connected'));
 
@@ -53,8 +55,8 @@ app.post('/api/sendMail', (req, res)=> {
     const transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         auth: {
-            user: 'zenithnoble354@gmail.com',
-            pass: 'dekaprio'
+            user: process.env.ACCOUNT_URL,
+            pass: process.env.PASSWORD_URL
         }
     })
     const mailOPtion = {
@@ -81,6 +83,6 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/contact", contactRoute);
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Backend server is running!");
 });
