@@ -19,7 +19,7 @@ const Topbar = () => {
           <NavLink exact to="/" className="myabout">
           <li className="topbarRightLinks"  onClick={() => setIsMobile(false)}>Home</li>
           </NavLink>
-          <NavLink to="/about" className="myabout">
+          <NavLink to="/about/library" className="myabout">
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
           </NavLink>
           <NavLink to="/contact" className="myabout"> 

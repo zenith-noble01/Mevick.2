@@ -7,7 +7,7 @@ const First = () => {
             <div className="firstContainer">
                 <h1>Mevick Bilingual Grammer School</h1>
                 <h4>Knowledge-Hardwork-Success</h4>
-                <Link to="/about">
+                <Link to="/about/library">
                    <button>Learn More</button>
                 </Link>
             </div>

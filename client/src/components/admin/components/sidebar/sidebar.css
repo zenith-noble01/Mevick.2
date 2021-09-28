@@ -1,14 +1,17 @@
 .sidebar {
-  flex: 1;
-  background: rgb(225, 225, 248);
-  position: sticky;
-  top: 70px;
+  width: 100%;
   height: calc(100vh - 60px);
+  display: flex;
 }
 
 .sidebarWrapper {
   padding: 20px;
   color: #555;
+  height: calc(100vh - 60px);
+  flex: 1;
+  background: rgb(208, 208, 223);
+  position: sticky;
+  top: 70px;
 }
 
 .sidebarMenu {
@@ -39,6 +42,10 @@
 .sidebarlinks.active {
   background: rgb(208, 208, 233);
   border-radius: 5px;
+}
+
+.adminContainer {
+  flex: 4;
 }
 
 @media (max-width: 700px) {
