@@ -5,6 +5,7 @@ import Post from '../../pages/post/Post'
 import StudentList from '../../pages/studentlist/StudentList'
 import TeacherList from '../../pages/teacherlist/TeacherList'
 import Messages from '../../pages/messages/Messages'
+import { Timeline } from '@material-ui/icons'
 const Sidebar = () => {
     const {path, url} = useRouteMatch()
     return (
@@ -13,8 +14,8 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <ul className="sidebatList">
                         <li className="sidebarlinks">
-                            <Link to={`${url}/dashboard`} className="link">
-                                Dashboard
+                            <Link to={`${url}/dashboard`} className="td">
+                            <Timeline/>Dashboard
                             </Link>
                         </li>
                     </ul>
@@ -24,7 +25,7 @@ const Sidebar = () => {
                     <ul className="sidebatList">
                         <li className="sidebarlinks ">
                             <Link to={`${url}/studentList`} className="td">
-                               Students
+                                <i className="fa fa-users"></i> Students
                             </Link>
                         </li>
                         <li className="sidebarlinks">

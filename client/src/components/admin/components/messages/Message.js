@@ -1,23 +1,44 @@
+import React, { useState, useEffect } from 'react'
 import './message.css'
-import parent from '../../../images/secon1.jpg'
+import Chat from '../chat/Chat'
+import ChatContent from '../chatcontent/ChatContent'
+import axios from 'axios'
 
 
 const Message = () =>{
+
+    const [messages, setMessages] = useState([])
+    const [currentMessage, setCurrentMessage] = useState(null)
+
+    useEffect(() =>{
+        const getMessage = async () => {
+            try {
+                const res = await axios.get("/contact")
+                setMessages(res.data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getMessage()
+    },[])
     return(
         <div className="messageContainer">
             <div className="messageWrapper">
                 <div className="messageSidebar">
-                    <div className="mess">
-                        <img src={parent} alt="mevick" className="messImg"  />
-                        <div className="messContent">
-                            <p className="messName">Zenith Noble</p>
-                            <p className="messDec">Lorem ipsum dolor Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nesciunt nostrum, repellat aliquid dolores ut officiis excepturi facilis soluta, ex eius unde sunt, similique itaque repellendus id </p>
-                            
+                    {messages.map(m =>(
+                        <div className="currentmess" onClick={()=> setCurrentMessage(m)}>
+                            <Chat message={m} />
                         </div>
-                    </div>
+                    ))}
                 </div>
                 <div className="messageContent">
-                    the message content
+                    { currentMessage ? 
+                    <div className="messageContentWrapper">
+                        <ChatContent message={currentMessage} setCurrentMessage={setCurrentMessage} />
+                    </div> : <div className="noChatYet">
+                        <span>select a chat Admin</span>
+                    </div>
+                    }
                 </div>
             </div>
         </div>

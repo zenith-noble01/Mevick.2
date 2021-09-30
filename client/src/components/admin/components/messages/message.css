@@ -16,8 +16,9 @@
 .messageSidebar {
   background: rgb(208, 208, 223);
   height: 80vh;
-  padding: 5px;
+  padding: 0 10px;
   flex: 1;
+  overflow-y: scroll;
 }
 
 .messageContent {
@@ -25,21 +26,72 @@
   margin-left: 1px;
   padding: 20px;
   background: rgb(208, 208, 223);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+}
+
+.noChatYet {
+  color: #222;
+  font-size: 70px;
+  text-align: center;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.messageContentWrapper {
+  width: 100%;
+  height: 70vh;
+  overflow-y: scroll;
+}
+
+.messageContentWrapper::-webkit-scrollbar-track {
+  background: rgb(170, 170, 189);
+}
+
+.messageContentWrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.messageContentWrapper::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+.messageSidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.messageSidebar::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+.messageSidebar::-webkit-scrollbar-track {
+  background: rgb(170, 170, 189);
+  padding: 10px;
 }
 
 .mess {
   display: flex;
   align-items: center;
-  background: rgb(7, 7, 37);
+  background: rgb(183, 183, 199);
   padding: 10px;
-  color: white;
+  color: #222;
   font-size: 12px;
   cursor: pointer;
   transition: 0.5s ease;
+  margin: 10px 0;
 }
 
 .messName {
   font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .messDec {
@@ -50,7 +102,7 @@
   -webkit-box-orient: vertical;
 }
 .mess:hover {
-  background: rgb(183, 183, 199);
+  background: rgb(170, 170, 189);
 }
 
 .messImg {
