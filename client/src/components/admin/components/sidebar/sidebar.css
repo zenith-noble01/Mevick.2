@@ -10,8 +10,6 @@
   height: calc(100vh - 60px);
   flex: 1;
   background: rgb(208, 208, 223);
-  position: sticky;
-  top: 70px;
 }
 
 .sidebarMenu {
@@ -32,11 +30,14 @@
   padding: 5px;
   margin-left: 10px;
   cursor: pointer;
+  align-items: center;
 }
 
 .td {
   text-decoration: none;
   color: gray;
+  display: flex;
+  align-items: center;
 }
 
 .sidebarlinks.active {

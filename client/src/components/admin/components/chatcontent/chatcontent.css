@@ -1,0 +1,41 @@
+.chatContent {
+  background: rgb(179, 179, 202);
+  padding: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.Chatitems {
+  margin-top: 50px;
+}
+.ContentName {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.ContentEmail {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+  letter-spacing: 1px;
+}
+
+.ContentPhone {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ContentMessage {
+  font-size: 15px;
+}
+
+.chatContentIcon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  color: black;
+}
