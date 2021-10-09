@@ -32,9 +32,14 @@
 }
 
 .abssidebarMobile {
-  width: 80px;
+  padding: 20px;
+  color: #626262;
+  position: fixed;
+  align-self: flex-start;
   height: 100vh;
-  background: blue;
+  float: left;
+  width: 80px;
+  background: rgb(208, 208, 223);
 }
 
 .absidebarTop {
