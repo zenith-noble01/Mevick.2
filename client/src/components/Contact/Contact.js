@@ -23,7 +23,7 @@ const Contact = () => {
         }
         console.log(mail);
         try {
-            await axios.post('/contact', mail)
+            await axios.post('http://localhost:7000/api/contact', mail)
         } catch (error) {
             console.log(error);
         }

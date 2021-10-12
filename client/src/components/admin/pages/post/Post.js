@@ -2,6 +2,7 @@ import "./post.css"
 import admin from '../../../images/secon1.jpg'
 import photo from '../../../images/photo.png'
 import {useState} from 'react'
+import { CloseOutlined } from '@material-ui/icons'
 import axios from 'axios'
 
 const Post = () => {
@@ -22,11 +23,11 @@ const Post = () => {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("/upload", data);
+        await axios.post("http://localhost:7000/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("/posts", newPost);
+      await axios.post("http://localhost:7000/api/posts", newPost);
       window.location.reload();
     } catch (err) {}
     }
@@ -45,7 +46,7 @@ const Post = () => {
                     {file &&(
                             <div className="postImgContainer">
                                 <img src={URL.createObjectURL(file)} alt="" className="postImgtaker" />
-                                <i className="closePost Imgfa fa-times" onClick={() => setFile(null)}></i>
+                                <CloseOutlined onClick={() => setFile(null)} className="FilerIconClose" />
                             </div>
                     )}
                     <div className="postFooter">
@@ -56,7 +57,7 @@ const Post = () => {
                          <input type="file" id="filetaker"  style={{display: 'none'}} onChange={(e) => setFile(e.target.files[0])} />
                         </div>
                         <div className="postBtnContainer">
-                            <button className="postBtn" type="submit">post</button>
+                            <button className="postBtn" type="submit">Post</button>
                         </div>
                     </div>
                 </form>

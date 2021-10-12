@@ -1,3 +1,27 @@
 .adminContainer {
   display: flex;
 }
+
+
+.this{
+  display: none;
+}
+
+@media(max-width: 700px){
+  .admin{
+    height: calc( 100vh - 60px);
+    align-items: center;
+    justify-content: center;
+  }
+  .this{
+    display: block;
+    height: calc( 100vh - 60px);
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background: cornsilk;
+  }
+}

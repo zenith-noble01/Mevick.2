@@ -8,6 +8,9 @@ const Admin = () => {
             <div className="adminContainer">
                 <Sidebar />
             </div>
+            <div className="this">
+                this feature is available only on Computer Desk Top OR laptop
+            </div>
         </div>
     )
 }

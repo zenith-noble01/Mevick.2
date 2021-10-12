@@ -10,20 +10,16 @@ import Administrative from '../administrative/Administrative'
 import Security from '../security/Security'
 import Coperative from '../coperative/Coperative'
 import Decipline from '../decipline/Decipline'
+// import {ArrowForward} from "@material-ui/icons"
 
 const AbSidebar = () => {
     const {path, url} = useRouteMatch()
     const [sidebarDropdown, setSidebarDropdown] = useState(false)
     const [school, setSchool] = useState(false)
-    const [active] = useState(false)
+    const [active, setActive] = useState(false)
     return (
         <div className="miles">
-        <div className={active ? "abssidebarMobile" : "abssidebar"}>
-            
-            {/* <div className="sidebarInput">
-                <i className="searchIcon fa fa-search"></i>
-                <input type="text" placeholder="Search" /> 
-            </div> */}
+        <div className={ active ? "abssidebarMobile" : "abssidebar"}>
             <div className="sidebarWrapper">
                 <ul className="sidebarItem">
                     <li className={sidebarDropdown ? "sidebarItemList1" : "inactive"} onClick={() => setSidebarDropdown(!sidebarDropdown)}><i className="sidbarDropIcon fas fa-university"></i> Institution <i className={sidebarDropdown? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li>
@@ -41,7 +37,8 @@ const AbSidebar = () => {
                          <Link to={`${url}/cantine`} className="link">Cantine</Link>
                         </li>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-binoculars"></i>
-                        <Link to={`${url}/overview`} className="link">Overview</Link>
+                        <Link to={`${url}/overview`} className="link">
+                           "Overview"</Link>
                         </li>
                     </ul> 
                     <li className={school ? "sidebarItemList1" : "inactive"} onClick={() => setSchool(!school)}><i class="sidbarDropIcon fas fa-school"></i>School  <i className={school ? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li> 

@@ -4,7 +4,7 @@ import logo from '../images/secon1.jpg'
 
 const Apost = ({post}) => {
     
-    const PF = 'http://localhost:5000/images/';
+    const PF = 'http://localhost:7000/images/';
     return (
         <div className="apost">
             <div className="blogTop">

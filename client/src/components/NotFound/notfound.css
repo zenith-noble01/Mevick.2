@@ -13,11 +13,18 @@
   font-size: 40px;
 }
 
-h1 {
+.opps{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+}
+
+.params{
+  margin: 0 10px;
+  font-size: 30px;
 }
 
 .mev {
@@ -61,5 +68,8 @@ h1 {
   }
   .mev {
     font-size: 25px;
+  }
+  .opps{
+    flex-direction: column;
   }
 }

@@ -1,92 +1,25 @@
 import "./winsm.css"
-import Visibility from '@material-ui/icons/Visibility'
-import logo from '../../../images/logo.png'
+import Win from "../win/Win"
+import { useState, useEffect} from 'react'
+import axios from 'axios'
+
 const Winsm = () => {
+    const [student, setStudent] = useState([])
+    useEffect(() => {
+      const getStudent = async () =>{
+        const res = await axios.get('http://localhost:5000/api/dummydata')
+        setStudent(res.data)
+      }
+      getStudent()
+    }, [])
     return (
         <div className="winsm">
             <span className="winsmTitile">New students</span>
-            <ul className="winsmLink">
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-                <li className="winsmLinkItem">
-                    <img src={logo} alt="" className="winsmImg"/>
-                    <div className="winsmUserToken">
-                        <span className="winsmUserName">Zenith Noble</span>
-                        <span className="winsmUserProffession">lower sixth</span>
-                    </div>
-                    <button className="winNet">
-                        <Visibility className="winNetIcons"/> Display   
-                    </button>
-                </li>
-            </ul>
+            <div className="winScrol">
+                {student.map((s=>
+                    <Win student={s} key={s} />
+                ))}
+            </div>
         </div>
     )
 }

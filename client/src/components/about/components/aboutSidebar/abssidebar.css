@@ -5,6 +5,7 @@
   align-items: center;
 }
 .abssidebar {
+  display: block;
   padding: 20px;
   color: #626262;
   position: fixed;
@@ -31,11 +32,6 @@
   width: 100%;
 }
 
-.abssidebarMobile {
-  width: 80px;
-  height: 100vh;
-  background: blue;
-}
 
 .absidebarTop {
   display: flex;
@@ -154,10 +150,12 @@ li {
 }
 
 @media (max-width: 700px) {
-  .abssidebar {
-    display: none;
-  }
-  .abssidebarMobile {
+  .abssidebar { 
     display: block;
+     position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    width: 50%;
   }
 }

@@ -1,6 +1,7 @@
 .post {
   flex: 4;
   display: flex;
+  background: white;
 }
 
 .postWrapper {
@@ -9,10 +10,11 @@
 }
 
 .postContainer {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   background: whitesmoke;
   border-radius: 20px;
+  margin: 0 auto;
 }
 
 .adminImg {
@@ -81,16 +83,20 @@
   width: 100%;
 }
 
-.closePost {
+.FilerIconClose {
   position: absolute;
   top: 10px;
   right: 20px;
   color: red;
   cursor: pointer;
   font-size: 30px;
+  transition: .5s ease;
+}
+.FilerIconClose:hover{
+  rotate: 360deg;
 }
 .postImgtaker {
   width: 100%;
-  height: 400px;
-  /* object-fit: cover; */
+  height: 300px;
+  object-fit: cover;
 }

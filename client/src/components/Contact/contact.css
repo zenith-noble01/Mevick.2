@@ -3,7 +3,7 @@
   width: 100%;
   /* align-items: center; */
   justify-content: space-between;
-  height: 100vh;
+  height: calc( 100vh - 60px);
 }
 
 .contactLeft {
@@ -126,7 +126,7 @@
     height: 50vh;
   }
   .contactRight {
-    height: 100vh;
+  height: calc( 100vh - 60px);
   }
   .username input {
     width: 90%;
