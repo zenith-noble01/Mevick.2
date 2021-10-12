@@ -1,57 +1,94 @@
-import * as React from "react";
 import { DataGrid } from "@material-ui/data-grid";
+import { DeleteOutline } from "@material-ui/icons";
+import { useEffect, useState } from "react";
+import axios from 'axios'
+import './student.css'
+import { Link } from "react-router-dom";
 
-const columns = [
+
+export default function DataTable() {
+  const handleDelete = (id) => {
+    setStudent(student.filter((item) => item.id !== id));
+  };
+  
+  const PF = "http://localhost:5000/images/"
+  const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
-    field: "firstName",
-    headerName: "First name",
-    width: 150,
+    field: "name",
+    headerName: "Student Name",
+    width: 200,
+    renderCell: (params) => {
+      return (
+        <div className="userListUser">
+          <img className="userListImg" src={PF + params.row.img} alt="" />
+          {params.row.name}
+        </div>
+      );
+    },
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 130,
     editable: true,
   },
   {
-    field: "lastName",
-    headerName: "Last name",
-    width: 150,
-    editable: true,
-  },
-  {
-    field: "age",
+    field: "stock",
     headerName: "Age",
     type: "number",
     width: 110,
     editable: true,
   },
   {
-    field: "fullName",
-    headerName: "Full name",
-    description: "This column has a value getter and is not sortable.",
-    sortable: false,
-    width: 160,
-    valueGetter: (params) =>
-      `${params.getValue(params.id, "firstName") || ""} ${
-        params.getValue(params.id, "lastName") || ""
-      }`,
+    field: "class",
+    headerName: "Class",
+    type: "number",
+    width: 150,
+    editable: false,
   },
-];
-
-const rows = [
-  { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-  { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-  { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-  { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-  { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-  { id: 6, lastName: "Melisandre", firstName: null, age: 150 },
-  { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-  { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-  { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
-];
-
-export default function DataTable() {
+  {
+    field: "price",
+    headerName: "School Fees",
+    type: "number",
+    width: 150,
+    editable: false,
+  },
+  {
+    field: "pric",
+    headerName: "Action",
+    type: "number",
+    width: 150,
+    editable: false,
+    renderCell: (params) => {
+      return (
+        <>
+          <Link to={"/students/" + params.row.id}>
+            <button className="userListEdit">Edit</button>
+          </Link>
+          <DeleteOutline
+            className="userListDelete"
+            onClick={() => handleDelete(params.row.id)}
+          />
+        </>
+      );
+    },
+  }
+  ];
+  const [student, setStudent] = useState([])
+  useEffect(() => {
+    const getStudent = async () =>{
+      const res = await axios.get('http://localhost:5000/api/dummydata')
+      setStudent(res.data)
+      console.log(res.data);
+    }
+    getStudent()
+  }, [])
+  
   return (
     <div style={{ height: 400, width: "100%" }}>
       <DataGrid
-        rows={rows}
+        rows={student}
         columns={columns}
         pageSize={5}
         checkboxSelection

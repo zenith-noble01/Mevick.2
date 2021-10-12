@@ -43,9 +43,9 @@ const Topbar = () => {
           <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
           <ul className={drop ? "dropListLogin" : 'dropList'} >
             <Link to="/adminLogin" className="myaboutl">
-            <li className="dropListItem">Admin</li>
+            <li className="dropListItem" onClick={()=> setDrop(true)}>Admin</li>
             </Link>
-            <li className="dropListItem">Student</li>
+            <li className="dropListItem" onClick={()=> setDrop(true)}>Student</li>
           </ul>
       </div>
       <button className="topbarMenuIcon" onClick={() => 

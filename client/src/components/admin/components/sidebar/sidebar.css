@@ -12,6 +12,11 @@
   background: rgb(208, 208, 223);
 }
 
+.sidebarIcon{
+  margin-right: 10px;
+  color: inherit;
+}
+
 .sidebarMenu {
   margin-top: 10px;
 }
@@ -28,9 +33,14 @@
   align-items: center;
   list-style: none;
   padding: 5px;
-  margin-left: 10px;
+  margin-left: 10px ;
   cursor: pointer;
   align-items: center;
+  transition: .5s ease;
+}
+
+.sidebarlinks:hover{
+  background: white;
 }
 
 .td {

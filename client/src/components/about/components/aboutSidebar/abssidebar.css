@@ -5,6 +5,7 @@
   align-items: center;
 }
 .abssidebar {
+  display: block;
   padding: 20px;
   color: #626262;
   position: fixed;
@@ -31,16 +32,6 @@
   width: 100%;
 }
 
-.abssidebarMobile {
-  padding: 20px;
-  color: #626262;
-  position: fixed;
-  align-self: flex-start;
-  height: 100vh;
-  float: left;
-  width: 80px;
-  background: rgb(208, 208, 223);
-}
 
 .absidebarTop {
   display: flex;
@@ -159,10 +150,12 @@ li {
 }
 
 @media (max-width: 700px) {
-  .abssidebar {
-    display: none;
-  }
-  .abssidebarMobile {
+  .abssidebar { 
     display: block;
+     position: absolute;
+    top: 60px;
+    left: 0;
+    background: white;
+    width: 50%;
   }
 }

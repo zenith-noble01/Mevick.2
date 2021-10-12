@@ -11,6 +11,7 @@ const postRoute = require("./routes/post");
 const contactRoute = require("./routes/contact");
 const studentRoute = require("./routes/student");
 const teacherRoute = require("./routes/teacher");
+const dummydata = require('./routes/dummydata')
 const cors = require('cors')
 const nodemailer = require('nodemailer');
 const path = require("path");
@@ -20,10 +21,10 @@ const path = require("path");
 dotenv.config();
 app.use(cors())
 
-const PORT = process.env.PORT || 7000
+const PORT = process.env.PORT || 5000
 
 // const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO,
+mongoose.connect(process.env.MONGO_URL,
  {useNewUrlParser: true,
   useUnifiedTopology: true}).then(console.log('connected'));
 
@@ -81,12 +82,16 @@ app.post('/api/sendMail', (req, res)=> {
     })
 })
 
+app.get("/api/dummydata", (req, res) =>{
+  res.json(dummydata)
+})
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/contact", contactRoute);
-app.use("api/students", studentRoute);
-app.use("api/teachers", teacherRoute);
+app.use("/api/students", studentRoute);
+app.use("/api/teachers", teacherRoute);
+
 app.listen(PORT, () => {
   console.log("Backend server is running!");
 });

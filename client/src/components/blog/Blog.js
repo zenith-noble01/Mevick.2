@@ -8,7 +8,7 @@ const Blog = () => {
 
     useEffect(() =>{
         const fetchPost = async () =>{
-            const res = await axios.get('/posts')
+            const res = await axios.get('http://localhost:7000/api/posts')
             console.log(res)
             setPosts(
             res.data.sort((p1, p2) => {
