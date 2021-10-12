@@ -12,7 +12,7 @@ import NewStudent from './components/admin/components/newstudent/NewStudent'
 
 
 function App() {
-  const  user = true;
+  const  user = false;
   // const Admin = true;
   return (
     <Router>
