@@ -1,0 +1,51 @@
+.id{
+    position: relative;
+    width: 100%;
+    height:calc( 100vh - 100px);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.idcontainer h3{
+    cursor: pointer;
+}
+
+
+.idcard{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(0,0, 0, 0.5);
+    align-items: center;
+    justify-content:  center;
+    display: flex;
+    
+}
+
+.idbtn{
+    padding: 7px 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+}
+
+.idContainer{
+    width: 55%;
+    height: 45%;
+    background: white;
+    border-radius: 10px;
+
+}
+
+.idImg{
+    width: 200px;
+    height: 233px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

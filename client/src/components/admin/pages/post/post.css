@@ -90,10 +90,7 @@
   color: red;
   cursor: pointer;
   font-size: 30px;
-  transition: .5s ease;
-}
-.FilerIconClose:hover{
-  rotate: 360deg;
+  transition: 1s ease;
 }
 .postImgtaker {
   width: 100%;

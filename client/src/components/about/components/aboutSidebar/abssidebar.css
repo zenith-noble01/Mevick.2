@@ -11,10 +11,9 @@
   position: fixed;
   align-self: flex-start;
   height: 100vh;
+  background: rgb(208, 208, 223);
   float: left;
   width: 25%;
-  background: rgb(208, 208, 223);
-  /* overflow-y: scroll; */
 }
 
 .activesidebar {
@@ -153,14 +152,9 @@ li {
   display: none;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .abssidebar { 
     display: none;
-     /* position: absolute;
-    top: 60px;
-    left: 0;
-    background: white;
-    width: 0%; */
   }
   .zedBtn{
     display: block;

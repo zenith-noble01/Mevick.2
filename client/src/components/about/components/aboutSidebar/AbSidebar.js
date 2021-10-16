@@ -39,7 +39,7 @@ const AbSidebar = () => {
                         </li>
                         <li className="dropdownItem"><i className="sidbarDropIcon fas fa-binoculars"></i>
                         <Link to={`${url}/overview`} className="link">
-                           "Overview"</Link>
+                           Overview</Link>
                         </li>
                     </ul> 
                     <li className={school ? "sidebarItemList1" : "inactive"} onClick={() => setSchool(!school)}><i class="sidbarDropIcon fas fa-school"></i>School  <i className={school ? 'chev fas fa-chevron-up' : "chev fas fa-chevron-down"}></i></li> 

@@ -38,7 +38,6 @@ export default function NewUser() {
             <option value="no">LSS</option>
             <option value="no">USA</option>
             <option value="no">USS</option>
-
           </select>
         </div>
         <div className="newUserItem">

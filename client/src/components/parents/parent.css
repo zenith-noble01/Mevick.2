@@ -1,0 +1,44 @@
+.parent{
+    width: 100%;
+}
+
+.parentDashboard{
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+}
+
+.dashElements{
+    width: 20%;
+    background: rgb(208, 208, 223);
+    float: left;
+    position: fixed;
+}
+
+.parentDashViewer{
+    float: right;
+    width: 74.8%;
+    position: relative;
+}
+
+.dashItems .url{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+    align-items: center;
+    color: inherit;
+}
+
+.dashItems:hover{
+    background: white;
+    border-top-right-radius: -10px;
+    border-bottom-right-radius: -10px;
+}
+
+.dashItems li{
+    margin-left: 3px;
+    list-style: none;
+}
+

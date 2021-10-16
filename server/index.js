@@ -24,9 +24,11 @@ app.use(cors())
 const PORT = process.env.PORT || 5000
 
 // const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI,
- {useNewUrlParser: true,
-  useUnifiedTopology: true}).then(console.log('connected'));
+mongoose.connect(process.env.MONGO_URI,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+}).then(console.log('connected'));
 
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
