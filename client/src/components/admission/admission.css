@@ -1,0 +1,154 @@
+
+
+.name,
+.address,
+.class,
+.father,
+.mother,
+.loginDetaiil{
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.admissionTitle{
+    font-size: 28px;
+    margin-top: 10px;
+}
+
+.tt{
+    width: 100%;
+}
+
+.thr{
+    width: 35%;
+}
+
+
+.star{
+    color: red;
+}
+
+.name{
+    margin: 0;
+}
+
+.theLinne{
+    background: gray;
+}
+
+.formContainer{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.inputWrappers{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.studentName{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+}
+
+.admissionInputs{
+    margin: 10px;
+    padding: 7px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.newUserItemA {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+  
+  .newUserItemA > label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(151, 150, 150);
+  }
+  
+  .newUserItemA > input {
+    height: 40px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+
+.admissionNoter{
+    margin-top: 20px;
+}
+
+.userDetailsInfo{
+    margin-top: 30px;
+}
+
+.userDetailsInfo span{
+    margin-bottom: 20px;
+}
+
+.giveItem > label{
+    margin-left: 10px;
+}
+
+.giveItem{
+    display: flex;
+    align-items: center;
+}
+
+.giveItem > input{
+    height: 40px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: none;
+}
+
+.submitBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submitBtn button{
+    padding: 10px 50px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 990px) {
+    .name,
+    .address,
+    .class,
+    .father,
+    .mother,
+    .loginDetaiil{
+        flex-direction: column;
+    }
+    .tt{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .thr{
+        width: 90%;
+    }
+    
+}

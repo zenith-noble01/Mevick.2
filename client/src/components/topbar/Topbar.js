@@ -22,6 +22,9 @@ const Topbar = () => {
           <NavLink to="/about/library" className="myabout">
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
           </NavLink>
+          <NavLink to="/admission" className="myabout">
+            <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Register</li>
+          </NavLink>
           <NavLink to="/contact" className="myabout"> 
                <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
           </NavLink>
@@ -29,10 +32,10 @@ const Topbar = () => {
                <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>News</li>
           </NavLink>
           <div className="notnow">
-           <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
+           <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Login</li>
           <ul className={drop ? "dropListLogin" : 'dropList'} onClick={() => setDrop(true)}>
-            <NavLink to="/adminLogin" className="myaboutl">
-            <li className="dropListItem">Admin</li>
+            <NavLink to="/ParentsLogin" className="myaboutl">
+            <li className="dropListItem">Parent</li>
             </NavLink>
             <li className="dropListItem">Student</li>
           </ul>
@@ -40,10 +43,10 @@ const Topbar = () => {
         </ul>
       </div>
       <div className="topbarProfile">
-          <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Register</li>
+          <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Login</li>
           <ul className={drop ? "dropListLogin" : 'dropList'} >
-            <Link to="/adminLogin" className="myaboutl">
-            <li className="dropListItem" onClick={()=> setDrop(true)}>Admin</li>
+            <Link to="/ParentsLogin" className="myaboutl">
+            <li className="dropListItem" onClick={()=> setDrop(true)}>Parent</li>
             </Link>
             <li className="dropListItem" onClick={()=> setDrop(true)}>Student</li>
           </ul>

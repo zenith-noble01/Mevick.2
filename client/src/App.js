@@ -9,10 +9,12 @@ import Alogin from './components/admin/pages/Login/Login'
 import Topbar from './components/topbar/Topbar'
 import EditStudent from './components/admin/components/editStudent/EditStudent'
 import NewStudent from './components/admin/components/newstudent/NewStudent'
+import Admission from './components/admission/Admission'
+import Parent from './components/parents/Parent'
 
 
 function App() {
-  const  user = false;
+  const  user = true;
   // const Admin = true;
   return (
     <Router>
@@ -33,8 +35,14 @@ function App() {
         <Route path="/blog">
           <Blog />
         </Route>
-        <Route path="/adminLogin">
+        <Route path="/ParentsLogin">
           <Alogin />
+        </Route>
+        <Route path="/admission">
+          <Admission />
+        </Route>
+        <Route path="/parent">
+          <Parent />
         </Route>
         <Route path="/Newstudent">
           {user ? <NewStudent /> : <Main />}
