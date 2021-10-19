@@ -3,15 +3,20 @@ import { Timeline, PaymentOutlined, Event, HomeWork, TimerSharp, LiveTvOutlined,
 import { Link, useRouteMatch, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/dashboard/Dashboard'
 import ID from './components/idcard/ID'
+import Book from "./components/book/Book"
+import ClassLive from "./components/classlive/ClassLive"
+import { useState } from "react"
+import TimeTable from "./components/timetable/TimeTable"
 
 
 const Parent = () =>{
+    const [call, setCall] = useState(false)
     const {path, url} = useRouteMatch()
     return(
         <div className="parent">
-            <div className="parentDashboard">
+            <div className={call ? "parentDashboardCallMode" : "parentDashboard"}>
                 <div className="parentDash">
-                    <div className="dashElements">
+                    <div className={call ? "disappear" : "dashElements"}>
                         <div className="dashItems">
                             <Link to={`${url}/dashboard`}  className="url">
                                 <Timeline />
@@ -49,7 +54,7 @@ const Parent = () =>{
                             </Link>
                         </div>
                         <div className="dashItems">
-                            <Link to={`${url}/bookissued`}  className="url">
+                            <Link to={`${url}/Bookissued`}  className="url">
                                 <BookOutlined />
                                 <li>Book Issued</li>
                             </Link>
@@ -74,6 +79,15 @@ const Parent = () =>{
                             </Route>
                             <Route path={`${path}/printId`}>
                                 <ID />
+                            </Route>
+                            <Route path={`${path}/Bookissued`}>
+                                <Book />
+                            </Route>
+                            <Route path={`${path}/liveclasses`}>
+                                <ClassLive setCall={setCall}  call={call}/>
+                            </Route>
+                            <Route path={`${path}/classtimetable`}>
+                                <TimeTable />
                             </Route>
                         </Switch>
                     </div>
