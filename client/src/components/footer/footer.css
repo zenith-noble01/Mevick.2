@@ -1,14 +1,13 @@
 .footer {
-  margin-top: 20px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(63, 13, 13);
+  background:linear-gradient(to right,#110804, #2d0b00);
   height: 10vh;
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   border-top-left-radius: 150px;
-  border-top-right-radius: 150px;
   color: white;
   font-weight: 700;
 }

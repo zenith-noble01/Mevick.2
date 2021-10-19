@@ -5,13 +5,14 @@ import NotFound from './components/NotFound/NotFound'
 import About from './components/about/About.'
 import Contact from './components/Contact/Contact'
 import Blog from './components/blog/Blog'
-import Alogin from './components/admin/pages/Login/Login'
+// import Alogin from './components/admin/pages/Login/Login'
 import Topbar from './components/topbar/Topbar'
 import EditStudent from './components/admin/components/editStudent/EditStudent'
 import NewStudent from './components/admin/components/newstudent/NewStudent'
 import Admission from './components/admission/Admission'
 import Parent from './components/parents/Parent'
-
+import Plogin from './components/parents/components/parentlogin/Plogin'
+// import Footer from './components/footer/Footer'
 
 function App() {
   const  user = true;
@@ -36,7 +37,7 @@ function App() {
           <Blog />
         </Route>
         <Route path="/ParentsLogin">
-          <Alogin />
+          <Plogin />
         </Route>
         <Route path="/admission">
           <Admission />
@@ -54,6 +55,7 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
+      {/* <Footer /> */}
     </Router>
   );
 }

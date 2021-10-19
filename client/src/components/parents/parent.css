@@ -7,6 +7,13 @@
     margin: 20px auto;
     background: white;
 }
+.parentDashboardCallMode{
+    width: 100%;
+    margin: auto;
+    background: blueviolet;
+    height: calc( 100vh - 60px);
+    padding: 10px;
+}
 
 .dashElements{
     width: 20%;
@@ -29,6 +36,10 @@
     text-decoration: none;
     align-items: center;
     color: inherit;
+}
+
+.disappear{
+    display: none;
 }
 
 .dashItems:hover{
