@@ -8,16 +8,16 @@ const Blog = () => {
 
     useEffect(() =>{
         const fetchPost = async () =>{
-            const res = await axios.get('http://localhost:7000/api/posts')
-            console.log(res)
+            const res = await axios.get('http://localhost:5000/api/posts')
             setPosts(
-            res.data.sort((p1, p2) => {
-            return new Date(p2.createdAt) - new Date(p1.createdAt);
+                res.data.sort((p1, p2) => {
+                    return new Date(p2.createdAt) - new Date(p1.createdAt);
            }));
         }
         fetchPost()
     }, [])
-
+    
+    // console.log(posts)
 
     return (
         <div className="blog">

@@ -23,11 +23,11 @@ const Post = () => {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("http://localhost:7000/api/upload", data);
+        await axios.post("http://localhost:5000/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("http://localhost:7000/api/posts", newPost);
+      await axios.post("http://localhost:5000/api/posts", newPost);
       window.location.reload();
     } catch (err) {}
     }
@@ -51,10 +51,10 @@ const Post = () => {
                     )}
                     <div className="postFooter">
                         <div className="photoSelection">
-                         <label htmlFor="filetaker" className="filetaker">
-                               <img src={photo} alt=""/> <p>Photo/Video</p>
-                         </label>
-                         <input type="file" id="filetaker"  style={{display: 'none'}} onChange={(e) => setFile(e.target.files[0])} />
+                            <label htmlFor="filetaker" className="filetaker">
+                                <img src={photo} alt=""/> <p>Photo/Video</p>
+                            </label>
+                            <input type="file" id="filetaker"  style={{display: 'none'}} onChange={(e) => setFile(e.target.files[0])} />
                         </div>
                         <div className="postBtnContainer">
                             <button className="postBtn" type="submit">Post</button>

@@ -1,0 +1,49 @@
+.dashboard{
+    width: 100%;
+    background: white;
+}
+
+.dashtop,
+.dashNoticeTop,
+.dashdetailstop{
+    height: 50px;
+    border-bottom: 1px solid rgb(208, 205, 205);
+    padding-left: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.dashNoticeTop{
+    border-right:  1px solid rgb(208, 205, 205);
+}
+
+
+.dssh
+.dashtop p span{
+    font-weight: 700;
+}
+
+.dashContainer{
+    display: flex;
+    width: 100%;
+}
+
+.dashNoticeBoard{
+    width: 50%;
+}
+
+.notivecontainer{
+    padding: 20px;
+}
+
+.dashDetails{
+    width: 50%;
+}
+
+.detailsContainer{
+    padding: 20px;
+}
+
+.detailsContainer p{
+    margin: 10px 0;
+}

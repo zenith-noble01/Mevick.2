@@ -3,10 +3,13 @@ import logo from '../images/secon1.jpg'
 
 
 const Apost = ({post}) => {
-    
-    const PF = 'http://localhost:7000/images/';
+    const PF = 'http://localhost:5000/images/';
+    setTimeout(() =>{
+        console.log(post);
+    }, 3000)
     return (
-        <div className="apost">
+        <>
+        {post && (<div className="apost">
             <div className="blogTop">
                 <div className="blogToper"> 
                 <div className="blogTopProfile">
@@ -21,7 +24,10 @@ const Apost = ({post}) => {
                 <img src={PF + post.img} alt="" className="blogCenterImg" />
             </div>
             <div className="blogbottom"></div>
-        </div>
+        </div>)}
+
+        {!post && <p>Looading</p>}
+        </>
     )
 }
 

@@ -56,11 +56,6 @@ router.get("/", async (req, res) => {
 });
 
 
-// //get all userspace
-// router.get("/users", async (req, res) =>{
-//   User.find()
-//   .then()
-// })
 
 
 

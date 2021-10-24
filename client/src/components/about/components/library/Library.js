@@ -1,5 +1,6 @@
 import './library.css'
 import arrow from '../../../images/lib.jpeg'
+import { ArrowDownward } from '@material-ui/icons'
 
 
 const Library = () =>{
@@ -42,8 +43,7 @@ const Library = () =>{
             <div className="imgContent">
                 <div className="imgArrow">
                     <p>Here's a Look of Our library</p>
-                    <i className="fa fa-arrow-down arrowImg"></i>
-                {/* <img src={arrow} alt="" className="arrowImg"  /> */}
+                    <ArrowDownward className="arrowImg"/>
                 </div>
                 <div className="libraryImgWrapper">
                     <div className="libraryImg">

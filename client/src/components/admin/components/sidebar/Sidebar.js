@@ -5,7 +5,8 @@ import Post from '../../pages/post/Post'
 import StudentList from '../../pages/studentlist/StudentList'
 import TeacherList from '../../pages/teacherlist/TeacherList'
 import Messages from '../../pages/messages/Messages'
-import { Timeline, PermIdentity, MailOutline, ChatBubbleOutline, Group, PostAdd, Class } from '@material-ui/icons'
+import Classes from '../Classes/Class'
+import { Timeline, PermIdentity, MailOutline, ChatBubbleOutline, Group, PostAdd, Class, School } from '@material-ui/icons'
 const Sidebar = () => {
     const {path, url} = useRouteMatch()
     return (
@@ -14,20 +15,25 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle">Quick Menu</h3>
                     <ul className="sidebatList">
-                    <p className="sidebarlinks">
-                        <Link to={`${url}/dashboard`} className="td">
-                           <Timeline className="sidebarIcon"/>Dashboard
-                        </Link>
-                    </p>
+                        <p className="sidebarlinks">
+                            <Link to={`${url}/dashboard`} className="td">
+                                <Timeline className="sidebarIcon"/>Dashboard
+                            </Link>
+                        </p>
                         <li className="sidebarlinks ">
                             <Link to={`${url}/studentList`} className="td">
                             <Group className="sidebarIcon" />  Students
                             </Link>
                         </li>
                         <li className="sidebarlinks">
-                           <Link to={`${url}/teacherList`} className="td">
-                              <PermIdentity className="sidebarIcon" /> Teacher
-                           </Link>
+                            <Link to={`${url}/teacherList`} className="td">
+                                <PermIdentity className="sidebarIcon" /> Teacher
+                            </Link>
+                        </li>
+                        <li className="sidebarlinks">
+                            <Link to={`${url}/classes`} className="td">
+                                <School className="sidebarIcon" /> Classes
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -74,6 +80,9 @@ const Sidebar = () => {
                     </Route>
                     <Route path={`${path}/messages`}>
                         <Messages />
+                    </Route>
+                    <Route path={`${path}/classes`}>
+                        <Classes />
                     </Route>
                 </Switch>
             </div>

@@ -1,0 +1,33 @@
+.classes{
+    background: white;
+    width: 100%;
+}
+
+.classTop{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: white; */
+    background: white;
+    border-bottom: 1px solid #999;
+}
+
+.parentIteml {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+    position: relative;
+}
+
+.parentIteml > input {
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+    color: #444;
+}

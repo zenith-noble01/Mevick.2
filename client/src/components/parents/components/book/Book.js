@@ -1,5 +1,6 @@
 import "./book.css";
 import mevick from '../../../images/secon1.jpg'
+// import { Link } from "react-router-dom"
 
 export default function Book() {
   const Button = ({ type }) => {
@@ -49,7 +50,7 @@ export default function Book() {
           <td className="widgetLgAmount">2</td>
           <td className="widgetLgDate">9/20/2021</td>
           <td className="widgetLgStatus">
-            <Button type="Pending" />
+              <Button type="Pending" />
           </td>
           <td className="widgetLgSubject">Physics</td>
           <td className="widgetLgISBN">89765435678909943</td>

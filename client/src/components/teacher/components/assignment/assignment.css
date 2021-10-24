@@ -1,0 +1,63 @@
+
+.postContainerT {
+    width: 70%;
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
+.postBtnA {
+    padding: 10px 40px;
+    background: #444;
+    cursor: pointer;
+    color: whitesmoke;
+    border: none;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.postImgContainerA {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+}  
+
+.postBtnContainerA{
+    position: relative;
+}
+
+.goout{
+    display: none;
+}
+
+.classContainer{
+    position: absolute;
+    background: white;
+    list-style: none;
+    bottom: 40px;
+    right: -130px;
+    transition: all 2s ease;
+    overflow-y: scroll;
+    max-height: 200px;
+    height: 120px;
+}
+
+.conta{
+    display: flex;
+    flex-direction: column;
+}
+
+.teacherClasses{
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+    padding: 8px 35px ;
+    transition: 0.5s ease;
+}
+
+.teacherClasses:hover{
+    background: #999;
+}

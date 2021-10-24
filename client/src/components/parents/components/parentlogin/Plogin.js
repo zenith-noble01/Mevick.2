@@ -1,5 +1,5 @@
 import React, { useState } from "react" 
-import { RemoveCircleRounded, RemoveRedEyeSharp} from "@material-ui/icons"
+import {Visibility, VisibilityOff} from "@material-ui/icons"
 import"./plogin.css"
 
 const Plogin = () => {
@@ -31,7 +31,7 @@ const Plogin = () => {
                     <div className="parentItem">
                         <label>Password</label>
                         <input className="names" type={!password ? "password" : "text"} required onChange={(e)=> setLock(e.target.value)} />
-                        {!password ? <RemoveRedEyeSharp className="eye" onClick={()=> setPassword(!password)}/> :   <RemoveCircleRounded  className="eye" onClick={()=> setPassword(!password)} />}
+                        {!password ? <Visibility className="eye" onClick={()=> setPassword(!password)}/> :   <VisibilityOff  className="eye" onClick={()=> setPassword(!password)} />}
                     </div>
                     <button>Sign In</button>
                 </form>
