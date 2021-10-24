@@ -21,9 +21,8 @@ const Contact = () => {
             phone: phone.current.value,
             message: message.current.value,
         }
-        console.log(mail);
         try {
-            await axios.post('http://localhost:7000/api/contact', mail)
+            await axios.post('http://localhost:5000/api/contact', mail)
         } catch (error) {
             console.log(error);
         }
@@ -42,16 +41,16 @@ const Contact = () => {
             </div>
             <form className="contactRight" onSubmit={handleSubmit}>
                 <div className="username">
-                    <input type="text" placeholder="Username" ref={name}/>
+                    <input type="text" placeholder="Username" ref={name} required/>
                 </div>
                 <div className="username">
-                    <input type="text" placeholder="Email Address" ref={email}/>
+                    <input type="text" placeholder="Email Address" ref={email} required/>
                 </div>
                 <div className="username">
-                    <input type="phone" placeholder="Phone Number" ref={phone}/>
+                    <input type="phone" placeholder="Phone Number" ref={phone} required/>
                 </div>
                 <div className="usernameMessage">
-                    <textarea placeholder="Message" ref={message}></textarea>
+                    <textarea placeholder="Message" ref={message} required></textarea>
                 </div>
                 <div className="btn">
                     <button className="rightBtn" type="submit">send</button>

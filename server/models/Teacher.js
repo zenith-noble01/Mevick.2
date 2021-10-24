@@ -14,9 +14,15 @@ const TeacherSchema = new mongoose.Schema(
       type: Number,
       required: true
     },
-    teacherclass: {
+    teacherclasses: {
         type: Array,
         required: true
+    },
+    teacherSubject:{
+      type: String
+    },
+    teacherProfilePic: {
+      type: String
     }
   },
   { timestamps: true }

@@ -1,11 +1,10 @@
 import "./dashboard.css"
-import { Link } from "react-router-dom"
 
 const Dashboard = () => {
     return (
         <div className="dashboard">
             <div className="dashtop">
-                <p>welcome <span>Zenith Noble</span></p>
+                <p>welcome Mr/Mrs<span>Zenith Noble</span></p>
             </div>
             <div className="dashContainer">
                 <div className="dashNoticeBoard">
@@ -24,13 +23,9 @@ const Dashboard = () => {
                         <p>Name : <span>Zenith Noble</span></p>
                         <p>ID: <span>45678907654323456</span></p>
                         <p>Session: <span>2021-2022</span></p>
-                        <p>Class: <span>LSS</span></p>
-                        <p>Roll: <span>Student</span>  </p>
+                        <p>Classes: <span>LSS</span></p>
+                        <p>Roll: <span>Teacher</span>  </p>
                         <p>Section: <span>Anglohone</span></p>
-                        <p>Fathers Name: Mr<span> Zed Miles</span></p>
-                        <p>ID Card: <span><Link to="/parent/printId">
-                        Print
-                        </Link></span></p>
                     </div>
                 </div>
             </div>

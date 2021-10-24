@@ -11,10 +11,13 @@ const postRoute = require("./routes/post");
 const contactRoute = require("./routes/contact");
 const studentRoute = require("./routes/student");
 const teacherRoute = require("./routes/teacher");
+const classRoute = require("./routes/class");
+const subjectRoute = require("./routes/subject");
 const dummydata = require('./routes/dummydata')
 const cors = require('cors')
 const nodemailer = require('nodemailer');
 const path = require("path");
+
 
 
 
@@ -93,6 +96,9 @@ app.use("/api/posts", postRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/students", studentRoute);
 app.use("/api/teachers", teacherRoute);
+app.use("/api/class", classRoute);
+app.use("/api/subject", subjectRoute);
+
 
 app.listen(PORT, () => {
   console.log("Backend server is running!");

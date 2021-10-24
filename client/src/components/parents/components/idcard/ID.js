@@ -21,7 +21,7 @@ const ID = () => {
             { id ? "" : "if the Your Id card got missing and you couldn't find it back print a new one here"}
                 <button onClick={handleStatus} className="idbtn">{ id ? "" : "PRINT"}</button>
             {id ? <div className="idcard">
-                <button className="btnPrint">Print Id</button>
+                <button className="btnPrint">{loading? <CircularProgress size="20px" color="white" /> :  "Print Id"}</button>
                 <CloseOutlined onClick={() =>setId(false)} className="FilerIconClose" />
                 {loading ? <CircularProgress size="70px" color="white" />
                 :

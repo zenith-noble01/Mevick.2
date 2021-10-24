@@ -5,14 +5,13 @@ import NotFound from './components/NotFound/NotFound'
 import About from './components/about/About.'
 import Contact from './components/Contact/Contact'
 import Blog from './components/blog/Blog'
-// import Alogin from './components/admin/pages/Login/Login'
 import Topbar from './components/topbar/Topbar'
 import EditStudent from './components/admin/components/editStudent/EditStudent'
 import NewStudent from './components/admin/components/newstudent/NewStudent'
 import Admission from './components/admission/Admission'
 import Parent from './components/parents/Parent'
 import Plogin from './components/parents/components/parentlogin/Plogin'
-// import Footer from './components/footer/Footer'
+import Teacher from './components/teacher/Teacher'
 
 function App() {
   const  user = true;
@@ -45,6 +44,9 @@ function App() {
         <Route path="/parent">
           <Parent />
         </Route>
+        <Route path="/teacher">
+          <Teacher />
+        </Route>
         <Route path="/Newstudent">
           {user ? <NewStudent /> : <Main />}
         </Route>
@@ -55,7 +57,6 @@ function App() {
           <NotFound />
         </Route>
       </Switch>
-      {/* <Footer /> */}
     </Router>
   );
 }
