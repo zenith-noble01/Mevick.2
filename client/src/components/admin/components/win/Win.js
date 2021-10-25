@@ -4,7 +4,7 @@ import './win.css'
 import { Link } from "react-router-dom";
 
 const Win = ({student}) => {
-  const PF = "http://localhost:5000/images/"
+  const PF = "http://https://mevback.herokuapp.com//images/"
     return (
         <div>
             <ul className="winsmLink">
