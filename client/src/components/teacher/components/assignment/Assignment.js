@@ -21,11 +21,11 @@ const Assignment = () => {
         newPost.img = fileName;
         console.log(newPost);
         try {
-            await axios.post("http://https://mevback.herokuapp.com//api/upload", data);
+            await axios.post("http://https://mevback.herokuapp.com/api/upload", data);
         } catch (err) {}
     }
     try {
-        await axios.post("http://https://mevback.herokuapp.com//api/posts", newPost);
+        await axios.post("http://https://mevback.herokuapp.com/api/posts", newPost);
         window.location.reload();
     } catch (err) {}
     }

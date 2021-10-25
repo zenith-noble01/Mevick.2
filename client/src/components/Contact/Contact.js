@@ -22,7 +22,7 @@ const Contact = () => {
             message: message.current.value,
         }
         try {
-            await axios.post('http://https://mevback.herokuapp.com//api/contact', mail)
+            await axios.post('http://https://mevback.herokuapp.com/api/contact', mail)
         } catch (error) {
             console.log(error);
         }
