@@ -11,7 +11,7 @@ export default function DataTable() {
     setStudent(student.filter((item) => item.id !== id));
   };
   
-  const PF = "http://localhost:5000/images/"
+  const PF = "http://https://mevback.herokuapp.com//images/"
   const columns = [
   { field: "id", headerName: "ID", width: 90 },
   {
@@ -78,7 +78,7 @@ export default function DataTable() {
   const [student, setStudent] = useState([])
   useEffect(() => {
     const getStudent = async () =>{
-      const res = await axios.get('http://localhost:5000/api/dummydata')
+      const res = await axios.get('http://https://mevback.herokuapp.com//api/dummydata')
       setStudent(res.data)
       console.log(res.data);
     }

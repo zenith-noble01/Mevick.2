@@ -51,11 +51,11 @@ const Admission = () => {
         infos.img = fileName;
         console.log(infos);
         try {
-          await axios.post("http://localhost:5000/api/upload", data);
+          await axios.post("http://https://mevback.herokuapp.com//api/upload", data);
         } catch (err) {}
       }
       try {
-        await axios.post("http://localhost:5000/api/students", infos);
+        await axios.post("http://https://mevback.herokuapp.com//api/students", infos);
         window.location.reload();
       } catch (err) {}
   }

@@ -7,7 +7,7 @@ const Winsm = () => {
     const [student, setStudent] = useState([])
     useEffect(() => {
       const getStudent = async () =>{
-        const res = await axios.get('http://localhost:5000/api/dummydata')
+        const res = await axios.get('http://https://mevback.herokuapp.com//api/dummydata')
         setStudent(res.data)
       }
       getStudent()
