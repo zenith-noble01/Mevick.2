@@ -3,7 +3,7 @@ import logo from '../images/secon1.jpg'
 
 
 const Apost = ({post}) => {
-    const PF = 'http://https://mevback.herokuapp.com//images/';
+    const PF = 'https://mevback.herokuapp.com/images/';
     setTimeout(() =>{
         console.log(post);
     }, 3000)
