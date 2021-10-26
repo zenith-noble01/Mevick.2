@@ -13,7 +13,7 @@ const Message = () =>{
     useEffect(() =>{
         const getMessage = async () => {
             try {
-                const res = await axios.get("http://https://mevback.herokuapp.com/api/contact")
+                const res = await axios.get("https://mevback.herokuapp.com/api/contact")
                 setMessages(res.data)
             } catch (error) {
                 console.log(error);
