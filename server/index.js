@@ -11,6 +11,7 @@ const connectDb = require('./config/db')
 
 //connect to database
 connectDb()
+app.use(cors())
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -34,11 +35,12 @@ app.get("/api/dummydata", (req, res) =>{
   res.json(dummydata)
 })
 
-app.use(cors())
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
+app.use("/api/posts", require("./routes/admin/post"));
+app.use("/api/contact", require("./routes/admin/contact"))
 
 const PORT = process.env.PORT || 7000;
 
