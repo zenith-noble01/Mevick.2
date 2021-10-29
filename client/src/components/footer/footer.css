@@ -10,6 +10,7 @@
   color: white;
   padding: 50px 0 30px;
   font-weight: 700;
+  flex-direction: column;
 }
 
 .row{
@@ -18,8 +19,6 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  flex-wrap: wrap;
-
 }
 
 .col{
@@ -29,7 +28,7 @@
 }
 
 .address{
-  margin: 2px 0;
+  margin: 1px 0;
 }
 
 .colNavLinks{
@@ -56,7 +55,8 @@
 
 
 .colP{
-  font-weight: normal;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .colhead{
@@ -68,7 +68,7 @@
 .email_id{
   width: fit-content;
   border-bottom: 1px solid #ccc;
-  margin: 20px 0 ;
+  margin: 15px 0 ;
 }
 
 .colBtn{
@@ -84,6 +84,7 @@
   background: none;
   color: white;
   outline: none;
+  width: 100%;
 }
 
 .inputTainer{
@@ -91,8 +92,31 @@
   display: flex;
   margin-bottom: 10px;
   padding-bottom: 10px;
+
 }
 
 .colFoot{
   margin-right: 10px;
+}
+
+
+.fotdec p{
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.mainhr{
+  margin-top: 20px;
+  width: 80%;
+}
+
+@media (max-width: 850px){
+  .row{
+    width: 100%;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .colhead{
+    text-align: center;
+  }
 }

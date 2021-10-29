@@ -82,7 +82,7 @@
     background: rgb(202, 201, 201);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .pLoLognContainer{
         width: 100%;
         background: none;

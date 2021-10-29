@@ -113,7 +113,7 @@
 .usernameMessage textarea::placeholder {
   color: white;
 }
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .contact {
     flex-direction: column;
   }

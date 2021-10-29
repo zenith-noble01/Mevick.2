@@ -96,7 +96,7 @@ ol li {
   padding: 10px;
 }
 
-@Media(max-width: 700px){
+@Media(max-width: 800px){
   .libraryImgWrapper {
     margin: 30px 0;
     display: flex;

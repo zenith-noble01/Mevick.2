@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../../models/User");
 const router = require("express").Router();
 const bcrypt = require("bcrypt");
 
@@ -56,34 +56,6 @@ router.get("/", async (req, res) => {
 });
 
 
-// app.post('/api/sendMail', (req, res)=> {
-//     console.log(req.body)
-//     const transporter = nodemailer.createTransport({
-//         host: 'smtp.gmail.com',
-//         auth: {
-//             user: process.env.ACCOUNT_URL,
-//             pass: process.env.PASSWORD_URL
-//         }
-//     })
-//     const mailOPtion = {
-//         from: req.body.email,
-//         to: 'zenithnoble354@gmail.com',
-//         subject: req.body.username,
-//         text: req.body.message,
-//         // html: `<p>${req.body.phone}</p>`
-        
-//     }
-
-//     transporter.sendMail(mailOPtion, (error, info) =>{
-//         if(error){
-//             console.log(error);
-//             res.send(error)
-//         }else{
-//             console.log('email was send');
-//             res.send('success');
-//         }
-//     })
-// })
 
 
 

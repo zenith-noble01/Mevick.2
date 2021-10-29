@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Subject = require("../models/Subject")
+const Subject = require("../../models/Subject")
 
 
 //CREATING A NEW SUBJECT IN THE DB
