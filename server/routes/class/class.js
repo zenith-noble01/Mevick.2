@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Class = require("../models/Class")
+const Class = require("../../models/class/Class")
 
 
 

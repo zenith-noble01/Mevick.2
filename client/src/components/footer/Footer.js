@@ -19,11 +19,11 @@ const Footer = () => {
                 </div>
                 <div className="col">
                     <h3 className="colhead">Office</h3>
-                    <p className="address">Apres Centre</p>
-                    <p className="address">zed Miles</p>
-                    <p className="address">Pteco, Yaounde, Cameroon</p>
-                    <p className="email_id">zenithnoble354@gmail.com</p>
-                    <h4>+237 653 43 95 74</h4>
+                        <p className="address">Apres Centre</p>
+                        <p className="address">zed Miles</p>
+                        <p className="address">Pteco, Yaounde, Cameroon</p>
+                        <p className="email_id">zenithnoble354@gmail.com</p>
+                        <h4>+237 653 43 95 74</h4>
                 </div>
                 <div className="col">
                     <h3 className="colhead">Links</h3>
@@ -64,6 +64,10 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
+            <hr className="mainhr"/>
+            <div className="fotdec">
+                <p>copyrights@PTECO 2021</p>
+            </div>
         </footer>
     )
 }
@@ -72,4 +76,25 @@ const Footer = () => {
 // y the last man
 // the expandables 3
 // the mechanic
+
+// import * as React from 'react';
+// import { useState } from 'react';
+// import ReactMapGL from 'react-map-gl';
+
+// function Map() {
+//   const [viewport, setViewport] = useState({
+//     width: 400,
+//     height: 400,
+//     latitude: 37.7577,
+//     longitude: -122.4376,
+//     zoom: 8
+//   });
+
+//   return (
+//     <ReactMapGL
+//       {...viewport}
+//       onViewportChange={nextViewport => setViewport(nextViewport)}
+//     />
+//   );
+// }
 export default Footer

@@ -1,44 +1,16 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const multer = require("multer");
-const userRoute = require("./routes/user");
-const authRoute = require("./routes/auth");
-const postRoute = require("./routes/post");
-const contactRoute = require("./routes/contact");
-const studentRoute = require("./routes/student");
-const teacherRoute = require("./routes/teacher");
-const classRoute = require("./routes/class");
-const subjectRoute = require("./routes/subject");
 const dummydata = require('./routes/dummydata')
-const cors = require('cors')
-const nodemailer = require('nodemailer');
+const cors = require('cors');
 const path = require("path");
+const connectDb = require('./config/db')
 
-
-
-
-dotenv.config();
-app.use(cors())
-
-const PORT = process.env.PORT || 5000
-
-// const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true
-}).then(console.log('connected'));
-
-app.use("/images", express.static(path.join(__dirname, "public/images")));
-
-//middleware
-app.use(express.json());
-app.use(helmet());
-app.use(morgan("common"));
+//connect to database
+connectDb()
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -58,48 +30,24 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   }
 });
 
-app.post('/api/sendMail', (req, res)=> {
-    console.log(req.body)
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        auth: {
-            user: process.env.ACCOUNT_URL,
-            pass: process.env.PASSWORD_URL
-        }
-    })
-    const mailOPtion = {
-        from: req.body.email,
-        to: 'zenithnoble354@gmail.com',
-        subject: req.body.username,
-        text: req.body.message,
-        // html: `<p>${req.body.phone}</p>`
-        
-    }
-
-    transporter.sendMail(mailOPtion, (error, info) =>{
-        if(error){
-            console.log(error);
-            res.send(error)
-        }else{
-            console.log('email was send');
-            res.send('success');
-        }
-    })
-})
-
 app.get("/api/dummydata", (req, res) =>{
   res.json(dummydata)
 })
-app.use("/api/auth", authRoute);
-app.use("/api/users", userRoute);
-app.use("/api/posts", postRoute);
-app.use("/api/contact", contactRoute);
-app.use("/api/students", studentRoute);
-app.use("/api/teachers", teacherRoute);
-app.use("/api/class", classRoute);
-app.use("/api/subject", subjectRoute);
 
+app.use(cors())
+app.use("/images", express.static(path.join(__dirname, "public/images")));
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
 
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 7000;
+
+const server = app.listen(PORT, () => {
   console.log("Backend server is running!");
 });
+
+//handle unhandledRejection errors for not giving something precise
+process.on("unhandledRejection", (err, promise) =>{
+  console.log(`Log Error ${err}`);
+  server.close(() => process.exit(1))
+})
