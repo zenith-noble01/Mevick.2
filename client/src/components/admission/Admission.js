@@ -8,7 +8,7 @@ const Admission = () => {
 
   const [file, setFile] = useState(null)
   const [studentname, setStudentName] = useState("")
-//   const [studentclass, setStudentClass] = useState("")
+  const [studentclass, setStudentClass] = useState("")
   const [studentemail, setStudentEmail] = useState("")
   const [gender, setGender] = useState("")
   const [email, setEmail] = useState("")
@@ -41,21 +41,22 @@ const Admission = () => {
         username,
         dob,
         studentaddress,
-       phone,
+        phone,
+        studentclass
       }
       if (file) {
         const data = new FormData();
         const fileName = Date.now() + file.name;
         data.append("name", fileName);
         data.append("file", file);
-        infos.img = fileName;
+        infos.studentImg = fileName;
         console.log(infos);
         try {
-          await axios.post("http://localhost:6000/api/upload", data);
+          await axios.post("http://localhost:5000/api/upload", data);
         } catch (err) {}
       }
       try {
-        await axios.post("http://localhost:6000/api/students", infos);
+        await axios.post("http://localhost:5000/api/studentAuth/register", infos);
         window.location.reload();
       } catch (err) {}
   }
@@ -81,8 +82,8 @@ const Admission = () => {
                                 <label>Gender</label>
                                 <select className="newUserSelect" name="active" id="active"
                                 onChange={(e) =>setGender(e.target.value)} >
-                                    <option value="yes">Male</option>
-                                    <option value="no">Female</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
                                 </select>
                             </div>
                             <div className="newUserItemA">
@@ -114,13 +115,13 @@ const Admission = () => {
                         <div className="class">
                             <div className="newUserItemA">
                                 <label>Class</label>
-                                <select className="newUserSelect" name="active" id="active">
-                                    <option value="yes">Form 4</option>
-                                    <option value="no">Form 5</option>
-                                    <option value="no">LSA</option>
-                                    <option value="no">LSS</option>
-                                    <option value="no">USA</option>
-                                    <option value="no">USS</option>
+                                <select className="newUserSelect" name="active" id="active" onChange={(e) =>setStudentClass(e.target.value)} >
+                                    <option value="Form 4">Form 4</option>
+                                    <option value="Form 5">Form 5</option>
+                                    <option value="LSA">LSA</option>
+                                    <option value="LSS">LSS</option>
+                                    <option value="USA">USA</option>
+                                    <option value="USS">USS</option>
                                 </select>
                             </div>
                             <div className="newUserItemA">

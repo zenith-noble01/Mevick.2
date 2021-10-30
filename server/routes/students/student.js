@@ -1,16 +1,7 @@
 const router = require("express").Router();
-const Student = require("../../models/Student");
+const Student = require("../../models/student/Student");
 
-//create a student
-router.post("/", async (req, res) => {
-  const newStudent = new Student(req.body);
-  try {
-    const saveStudent = await newStudent.save();
-    res.status(200).json(saveStudent);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
 //update a student
 router.put("/:id", async (req, res) => {
   try {

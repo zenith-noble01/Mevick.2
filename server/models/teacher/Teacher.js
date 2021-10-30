@@ -10,6 +10,10 @@ const TeacherSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    teacherpassword: {
+      type: String,
+      required: true
+    },
     teacherphone: {
       type: Number,
       required: true
