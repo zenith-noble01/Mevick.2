@@ -23,11 +23,11 @@ const Post = () => {
       newPost.img = fileName;
       console.log(newPost);
       try {
-        await axios.post("http://localhost:6000/api/upload", data);
+        await axios.post("http://localhost:5000/api/upload", data);
       } catch (err) {}
     }
     try {
-      await axios.post("http://localhost:6000/api/posts", newPost);
+      await axios.post("http://localhost:5000/api/posts", newPost);
       window.location.reload();
     } catch (err) {}
     }
