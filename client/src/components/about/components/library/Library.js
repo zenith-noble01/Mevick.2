@@ -47,13 +47,13 @@ const Library = () =>{
                 </div>
                 <div className="libraryImgWrapper">
                     <div className="libraryImg">
-                        <img src={arrow} alt="" />
+                        <img src="https://getgeorgiareading.org/wp-content/uploads/2021/05/girl-holding-book-in-library-banner-1200.jpg" alt="" />
                         <div className="libraryDec">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum qui est magni minus iusto vitae saepe eos dolores magnam mollitia voluptatem nobis laudantium non laborum, impedit explicabo, autem praesentium maiores.
                         </div>
                     </div>
                     <div className="libraryImg">
-                        <img src={arrow} alt="" />
+                        <img src="https://www.denverpost.com/wp-content/uploads/2019/09/TDP-L-DENVER-PUBLIC-LIBRARY__HHR0395.jpg" alt="" />
                         <div className="libraryDec">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum qui est magni minus iusto vitae saepe eos dolores magnam mollitia voluptatem nobis laudantium non laborum, impedit explicabo, autem praesentium maiores.
                         </div>

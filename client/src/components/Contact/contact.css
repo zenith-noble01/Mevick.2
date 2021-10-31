@@ -1,137 +1,102 @@
-.contact {
-  display: flex;
-  width: 100%;
-  /* align-items: center; */
-  justify-content: space-between;
+.contact{
   height: calc( 100vh - 60px);
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contactLeft {
-  width: 50%;
-  align-items: center;
+.contactContainer{
+  height: 80%;
+  width: 70%;
+  background: whitesmoke;
   display: flex;
-  background: rgb(63, 13, 13);
-  color: white;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.contactLeftside{
+  width: 60%;
+  height: 100%;
+  background: rgb(226, 232, 238);
   padding: 20px;
 }
 
-.contactLeftInfo {
+.contactIOne{
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  justify-content: space-between;
 }
 
-.LogoDes {
-  font-size: 30px;
+.contactInputIitem{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.contactInputIitem > label{
+  margin-bottom: 7px;
+}
+
+.contactInputIitem > input{
+  height: 40px;
+  border: none;
+  background: whitesmoke;
+  outline: none;
+  width: 95%;
+  padding:0 10px;
+}
+
+.contactInputIitems{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.contactInputIitems > label{
+  margin-bottom: 7px;
+}
+
+.contactInputIitems > input{
+  height: 40px;
+  border: none;
+  background: whitesmoke;
+  outline: none;
+  width: 91%;
+  padding:0 10px;
+}
+
+
+.contactInputIitem > textarea{
+  height: 40px;
+  border: none;
+  background: whitesmoke;
+  outline: none;
+  width: 95%;
+  padding: 10px;
+  height: 100px;
+  resize: none;
+}
+
+.contactSender{
+  padding: 8px 15px;
+  background: #888888;
+  border: none;
+  cursor: pointer;
+  color: whitesmoke;
+  border-radius: 5px;
   font-weight: bold;
 }
 
-.backToHome {
-  padding: 10px 40px;
+
+.contactRightSide{
+  background-image:linear-gradient(rgba(4, 9, 30, 0.1), rgba(4, 9, 30, 0.3)), url("../images/mevick.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 40%;
   cursor: pointer;
-  background: white;
-  transition: 0.5s ease;
-  border-radius: 5px;
-  border: none;
-  margin-top: 20px;
-}
-
-.backToHome:hover {
-  background: rgb(214, 212, 212);
-}
-
-.contactRight {
-  width: 50%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.username {
-  margin: 10px 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.username input {
-  height: 40px;
-  border: none;
-  padding: 0 10px;
-  width: 60%;
-  outline: none;
-  background: rgb(63, 13, 13);
-  color: white;
-  border-radius: 5px;
-}
-
-.usernameMessage {
-  margin: 10px 0;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.usernameMessage textarea {
-  border: none;
-  padding: 15px 10px;
-  width: 60%;
-  outline: none;
-  resize: none;
-  background: rgb(63, 13, 13);
-  height: 200px;
-  color: white;
-  border-radius: 5px;
-  font-size: 17px;
-}
-
-.rightBtn {
-  padding: 10px 60px;
-  margin-top: 10px;
-  border: none;
-  background: rgb(63, 13, 13);
-  color: white;
-  cursor: pointer;
-  transition: 0.5s ease;
-  border-radius: 5px;
-}
-
-.rightBtn:hover {
-  background: rgb(77, 18, 18);
-}
-
-.username input::placeholder {
-  color: white;
-}
-
-.usernameMessage textarea::placeholder {
-  color: white;
-}
-@media (max-width: 800px) {
-  .contact {
-    flex-direction: column;
-  }
-  .contactLeft,
-  .contactRight {
-    width: 100%;
-  }
-
-  .contactLeft {
-    height: 50vh;
-  }
-  .contactRight {
-  height: calc( 100vh - 60px);
-  }
-  .username input {
-    width: 90%;
-  }
-  .usernameMessage textarea {
-    width: 90%;
-  }
 }
