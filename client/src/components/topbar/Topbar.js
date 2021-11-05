@@ -17,7 +17,7 @@ const Topbar = () => {
       <div className="topbarRight">
         <ul className={isMobile ? "topbarLinks__Moblie" : "topbarLinks"} >
           <NavLink exact to="/" className="myabout">
-          <li className="topbarRightLinks"  onClick={() => setIsMobile(false)}>Home</li>
+            <li className="topbarRightLinks"  onClick={() => setIsMobile(false)}>Home</li>
           </NavLink>
           <NavLink to="/about/library" className="myabout">
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
@@ -26,17 +26,18 @@ const Topbar = () => {
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Register</li>
           </NavLink>
           <NavLink to="/contact" className="myabout"> 
-               <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
+              <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
           </NavLink>
           <NavLink to="/blog" className="myabout"> 
-               <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>News</li>
+              <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>News</li>
           </NavLink>
           <div className="notnow">
-           <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Login</li>
+          <li className="topbarProfileList" onClick={() => setDrop(!drop)}>Login</li>
           <ul className={drop ? "dropListLogin" : 'dropList'} onClick={() => setDrop(true)}>
             <NavLink to="/ParentsLogin" className="myaboutl">
             <li className="dropListItem">Parent</li>
             </NavLink>
+            <li className="dropListItem">Teacher</li>
             <li className="dropListItem">Student</li>
           </ul>
           </div>

@@ -31,4 +31,7 @@
   .whatContainer {
     flex-direction: column;
   }
+  .cont{
+    width: 90%;
+  }
 }
