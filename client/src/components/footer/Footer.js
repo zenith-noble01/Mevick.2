@@ -66,7 +66,9 @@ const Footer = () => {
             </div>
             <hr className="mainhr"/>
             <div className="fotdec">
-                <p>copyrights@PTECO 2021</p>
+                <p>
+                    <Link to="/AdminLogin" className="copright">copyright</Link>s@PTECO 2021
+                </p>
             </div>
         </footer>
     )

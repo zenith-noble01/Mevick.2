@@ -48,6 +48,7 @@ const Topbar = () => {
             <Link to="/ParentsLogin" className="myaboutl">
             <li className="dropListItem" onClick={()=> setDrop(true)}>Parent</li>
             </Link>
+            <li className="dropListItem" onClick={()=> setDrop(true)}>Teacher</li>
             <li className="dropListItem" onClick={()=> setDrop(true)}>Student</li>
           </ul>
       </div>
