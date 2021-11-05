@@ -19,7 +19,6 @@ const Login = () => {
             lock
         }
         console.log(info);
-
     }
     return (
         <div className="plogin">

@@ -21,24 +21,20 @@ const Contact = () => {
             subject: subject.current.value,
             message: message.current.value,
         }
-        try {
-            await axios.post('http://localhost:5000/api/contact', mail)
-            emailjs.sendForm('service_0xatvja', 'template_wb3necp', form.current, 'user_YQWZkeXOumjrAgisVJEqI')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-            console.log(mail);
-        } catch (error) {
-            console.log(error);
-        }
+        await axios.post('http://localhost:5000/api/contact', mail);
+
+        emailjs.sendForm('service_0xatvja', 'template_wb3necp', form.current, 'user_YQWZkeXOumjrAgisVJEqI')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
     }
     return (
         <div className="contact">
             <div className="contactContainer">
                 <div className="contactLeftside">
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} ref={form}>
                         <div className="contactIOne">
                             <div className="contactInputIitems">
                                 <label>Full Name</label>
