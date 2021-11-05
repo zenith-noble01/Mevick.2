@@ -21,7 +21,7 @@ const Login = () => {
         console.log(info);
     }
     return (
-        <div className="plogin">
+        <div className="Alogin">
             <div className="ALoLognContainer">
                 <p className="secret">You found the secret Admin</p>
                 <form className="ParentForm" onSubmit={handleLogin}>
@@ -41,7 +41,11 @@ const Login = () => {
                     <button>Sign In</button>
                 </form>
             </div>
-    </div>
+            <div className="seen">
+                <p className="secret found">You found the secret Admin</p>
+                <p className="but">Opps!! this feature  is not available on mobile devices</p>
+            </div>
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-.plogin{
+.Alogin{
   background-image:linear-gradient( rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../../../images/assembly.jpg");
   height: calc( 100vh - 60px);
   background-position: center;
@@ -83,13 +83,29 @@ color: whitesmoke;
   background: rgb(202, 201, 201);
 }
 
+.seen{
+  display: none;
+  text-align: center;
+}
+
+.found{
+  font-weight: 800;
+}
+
+.but{
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: 20px;
+}
+
 @media (max-width: 800px) {
   .ALoLognContainer{
-      width: 100%;
-      background: none;
-      padding: 0;
+    display: none;
   }
-  .parentItem{
-      width: 90%;
+  .seen{
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    padding: 20px;
+    color: white;
   }
 }
