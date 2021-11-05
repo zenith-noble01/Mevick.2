@@ -8,7 +8,7 @@ const ChatContent = ({message, setCurrentMessage}) => {
             <div className="Chatitems">
                 <p className="ContentName">{message.name}</p>
                 <p className="ContentEmail">{message.email}</p>
-                <p className="ContentPhone">{message.phone}</p>
+                <p className="ContentPhone">{message.subject}</p>
                 <p className="ContentMessage">{message.message}</p>
             </div>
         </div>

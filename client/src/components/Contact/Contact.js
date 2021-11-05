@@ -1,61 +1,68 @@
 import { useRef} from "react"
-import "./contact.css"
-import logo from '../images/logo.png'
-import { Link } from 'react-router-dom'
+import emailjs from 'emailjs-com';
 import axios from 'axios'
+import "./contact.css"
 
 
 const Contact = () => {
     const name = useRef()
     const email = useRef()
-    const phone = useRef()
+    const subject = useRef()
     const message = useRef()
+
+    const form = useRef();
 
 
     const handleSubmit = async (e) =>{
         e.preventDefault();
-
         const mail = {
             name: name.current.value,
             email: email.current.value,
-            phone: phone.current.value,
+            subject: subject.current.value,
             message: message.current.value,
         }
         try {
             await axios.post('http://localhost:5000/api/contact', mail)
+            emailjs.sendForm('service_0xatvja', 'template_wb3necp', form.current, 'user_YQWZkeXOumjrAgisVJEqI')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            console.log(mail);
         } catch (error) {
             console.log(error);
         }
     }
     return (
         <div className="contact">
-            <div className="contactLeft">
-                <div className="contactLeftInfo">
-                    <img src={logo} alt="" />
-                    <span className="LogoDes">Mevick</span>
+            <div className="contactContainer">
+                <div className="contactLeftside">
+                    <form onSubmit={handleSubmit}>
+                        <div className="contactIOne">
+                            <div className="contactInputIitems">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Name" required ref={name} name="name" />
+                            </div>
+                            <div className="contactInputIitems">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="Email" required ref={email} name="email"  />
+                            </div>
+                        </div>
+                        <div className="contactInputIitem">
+                            <label>Subject</label>
+                            <input type="text" placeholder="Subject" required  ref={subject} name="subject" />
+                        </div>
+                        <div className="contactInputIitem">
+                            <label>Message</label>
+                            <textarea placeholder="Message" required ref={message} name="message" ></textarea>
+                        </div>
+                        <button type="submit" className="contactSender">Send Message</button>
+                    </form>
                 </div>
-                <p>Greetings Sir/Madame All the fields 👉  are require for the information you are about to send and not most importantly your <b>Phone Number</b> is highly required because is it will be use to reply to your message.</p>
-                <Link to="/">
-                    <button className="backToHome">Back to Home</button>
-                </Link>
+                <div className="contactRightSide">
+                </div>
             </div>
-            <form className="contactRight" onSubmit={handleSubmit}>
-                <div className="username">
-                    <input type="text" placeholder="Username" ref={name} required/>
-                </div>
-                <div className="username">
-                    <input type="text" placeholder="Email Address" ref={email} required/>
-                </div>
-                <div className="username">
-                    <input type="phone" placeholder="Phone Number" ref={phone} required/>
-                </div>
-                <div className="usernameMessage">
-                    <textarea placeholder="Message" ref={message} required></textarea>
-                </div>
-                <div className="btn">
-                    <button className="rightBtn" type="submit">send</button>
-                </div>
-            </form>
         </div>
     )
 }

@@ -110,6 +110,12 @@
   width: 80%;
 }
 
+.copright{
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 @media (max-width: 850px){
   .row{
     width: 100%;

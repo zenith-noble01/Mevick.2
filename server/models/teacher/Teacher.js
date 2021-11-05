@@ -16,11 +16,9 @@ const TeacherSchema = new mongoose.Schema(
     },
     teacherphone: {
       type: Number,
-      required: true
     },
     teacherclasses: {
         type: Array,
-        required: true
     },
     teacherSubject:{
       type: String

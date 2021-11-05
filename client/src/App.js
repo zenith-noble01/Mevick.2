@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Admin from './components/admin/Admin'
+import AdminLogin from './components/admin/pages/Login/Login'
 import Main from './components/main/Main'
 import NotFound from './components/NotFound/NotFound'
 import About from './components/about/About.'
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/admin">
           {user ? <Admin /> : <Main />}
+        </Route>
+        <Route path="/AdminLogin">
+          <AdminLogin />
         </Route>
         <Route path="/about">
           <About />
