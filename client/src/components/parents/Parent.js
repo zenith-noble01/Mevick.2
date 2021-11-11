@@ -7,6 +7,7 @@ import Book from "./components/book/Book"
 import ClassLive from "./components/classlive/ClassLive"
 import { useState } from "react"
 import TimeTable from "./components/timetable/TimeTable"
+import ReportCard from "./components/reportCard/ReportCard"
 
 
 const Parent = () =>{
@@ -66,6 +67,12 @@ const Parent = () =>{
                             </Link>
                         </div>
                         <div className="dashItems">
+                            <Link to={`${url}/reportCard`}  className="url">
+                                <TimerSharp />
+                                <li>Print ReportCard</li>
+                            </Link>
+                        </div>
+                        <div className="dashItems">
                             <Link to={`${url}/printId`}  className="url">
                                 <CardTravel />
                                 <li>Print Id</li>
@@ -88,6 +95,9 @@ const Parent = () =>{
                             </Route>
                             <Route path={`${path}/classtimetable`}>
                                 <TimeTable />
+                            </Route>
+                            <Route path={`${path}/reportCard`}>
+                                <ReportCard />
                             </Route>
                         </Switch>
                     </div>

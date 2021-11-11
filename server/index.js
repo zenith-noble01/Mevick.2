@@ -45,6 +45,7 @@ app.use("/api/studentAuth", require("./routes/students/auth"))
 app.use("/api/getStudents", require("./routes/students/student"))
 app.use("/api/teacherAuth", require("./routes/teachers/teacherAuth"))
 app.use("/api/getTeachers", require("./routes/teachers/teacher"))
+app.use("/api/adminAuth", require("./routes/admin/auth"))
 
 const PORT = process.env.PORT || 7000;
 // zenith

@@ -6,7 +6,8 @@ import logo from '../images/logo.png'
 const Topbar = () => {
 
   const [isMobile, setIsMobile] = useState(false)
-  const [drop, setDrop] = useState(true)
+  const [drop, setDrop] = useState(true);
+  const [application, setApplication] = useState(false)
 
   return (
     <div className='topbar'>
@@ -22,9 +23,18 @@ const Topbar = () => {
           <NavLink to="/about/library" className="myabout">
             <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>About</li>
           </NavLink>
-          <NavLink to="/admission" className="myabout">
-            <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Register</li>
-          </NavLink>
+          <div className="application">
+            <li className="topbarRightLinks" onClick={() => setApplication(!application)}>Apply</li>
+            <ul className={application ? "showList" : "showhide"}>
+            <NavLink to="/admission" className="myabout">
+              <li className="applicationItem" onClick={() => setIsMobile(false)} >Admission</li>
+            </NavLink>
+            <hr />
+            <NavLink to="/Jobs" className="myabout">
+              <li className="applicationItem" onClick={() => setIsMobile(false)}>Jobs</li>
+            </NavLink>
+            </ul>
+          </div>
           <NavLink to="/contact" className="myabout"> 
               <li className="topbarRightLinks" onClick={() => setIsMobile(false)}>Contact</li>
           </NavLink>
