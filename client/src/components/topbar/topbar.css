@@ -20,6 +20,34 @@
   transition: .5s ease-in-out;
 }
 
+.application{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.showList{
+  display: block;
+  position: absolute;
+  top: 50px;
+  background: white;
+  list-style: none;
+  left: 0;
+  width: 130px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.75);
+}
+
+.applicationItem{
+  padding: 3px 20px;
+  
+}
+
+.showhide{
+  display: none;
+}
+
+
 .topbarLinks {
   display: flex;
 }
