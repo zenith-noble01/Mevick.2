@@ -13,6 +13,7 @@ import Admission from './components/admission/Admission'
 import Parent from './components/parents/Parent'
 import Plogin from './components/parents/components/parentlogin/Plogin'
 import Teacher from './components/teacher/Teacher'
+import Job from './components/jobs/Job'
 
 function App() {
   const  user = true;
@@ -50,6 +51,9 @@ function App() {
         </Route>
         <Route path="/teacher">
           <Teacher />
+        </Route>
+        <Route path="/Jobs">
+          <Job />
         </Route>
         <Route path="/Newstudent">
           {user ? <NewStudent /> : <Main />}

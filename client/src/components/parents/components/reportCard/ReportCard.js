@@ -36,107 +36,101 @@ const ReportCard = () => {
                         <img src={zenith} alt="" />
                     </div>
                 </div>
-                <table className="timetableTable">
-                <tr className="timetableTr">
-                    <th className="timetableTh">SUBJECTS</th>
-                    <th className="timetableTh">EV1</th>
-                    <th className="timetableTh">EV2</th>
-                    <th className="timetableTh">Mark</th>
-                    <th className="timetableTh">Coef</th>
-                    <th className="timetableTh">M*C</th>
-                    <th className="timetableTh">Rank</th>
-                    <th className="timetableTh">Remark</th>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">BIOLOGY</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">/</td>
-                    <td className="timetableDate">not offering</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDate">CHEMISTRY</td>
-                    <td className="timetableDate">10</td>
-                    <td className="timetableDate">19</td>
-                    <td className="timetableDate">14.5</td>
-                    <td className="timetableDate">5</td>
-                    <td className="timetableDate">72.5</td>
-                    <td className="timetableDate">12th/34</td>
-                    <td className="timetableDate">Good</td>
-                </tr>
-                <tr className="timetableTr">
-                    <td className="timetableDateadjd" colSpan="8">
-                        <div className="reportcardFoter">
-                        <div className="reportcardFoterLeft"></div>
-                        <div className="reportcardFoterRight"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            
+                <table className="timetableTable" cellSpacing="2" cellPadding="4" border="2">
+                    <tr className="timetableTr">
+                        <th className="timetableTh">SUBJECTS</th>
+                        <th className="timetableTh">EV1</th>
+                        <th className="timetableTh">EV2</th>
+                        <th className="timetableTh">Mark</th>
+                        <th className="timetableTh">Coef</th>
+                        <th className="timetableTh">M*C</th>
+                        <th className="timetableTh">Rank</th>
+                        <th className="timetableTh">Remark</th>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">BIOLOGY</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">/</td>
+                        <td className="timetableDateReportCard">not offering</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                    <tr className="timetableTr">
+                        <td className="timetableDateReportCard">CHEMISTRY</td>
+                        <td className="timetableDateReportCard">10</td>
+                        <td className="timetableDateReportCard">19</td>
+                        <td className="timetableDateReportCard">14.5</td>
+                        <td className="timetableDateReportCard">5</td>
+                        <td className="timetableDateReportCard">72.5</td>
+                        <td className="timetableDateReportCard">12th/34</td>
+                        <td className="timetableDateReportCard">Good</td>
+                    </tr>
+                </table>
+            <div className="reportFooter">
+                
+            </div>
             </div>
         </div>
     )
