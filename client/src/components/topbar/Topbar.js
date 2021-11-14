@@ -27,11 +27,11 @@ const Topbar = () => {
             <li className="topbarRightLinks" onClick={() => setApplication(!application)}>Apply</li>
             <ul className={application ? "showList" : "showhide"}>
             <NavLink to="/admission" className="myabout">
-              <li className="applicationItem" onClick={() => setIsMobile(false)} >Admission</li>
+              <li className="applicationItem" onClick={() => setApplication(false)} >Admission</li>
             </NavLink>
             <hr />
             <NavLink to="/Jobs" className="myabout">
-              <li className="applicationItem" onClick={() => setIsMobile(false)}>Jobs</li>
+              <li className="applicationItem" onClick={() => setApplication(false)}>Jobs</li>
             </NavLink>
             </ul>
           </div>

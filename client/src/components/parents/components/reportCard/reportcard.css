@@ -88,5 +88,8 @@
     border-top: 1px solid #000;
     display: flex;
     align-items: center;
-    height: 200px;
+}
+
+.timetableDateReportCard{
+    font-size: 10px;
 }
