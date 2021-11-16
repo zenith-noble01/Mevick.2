@@ -1,3 +1,111 @@
 .job {
-    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc( 100vh - 60px);
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.jobContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+}
+
+.nma{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+}
+/* 
+.nma input{
+    width: 90%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2em;
+} */
+
+.nma textarea{
+    width: 100%;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    outline: none;
+    resize: none;
+}
+
+.indent{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.indent1{
+    width: 49%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2em;
+}
+
+.jobContainer button{
+    padding: 8px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ddd;
+    transition: 0.5s ease;
+}
+
+.jobContainer button:hover{
+    background: #aaa;
+}
+
+
+.newUserItemA {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+
+.newUserSelectJob{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 1.2em;
+    background: none;
 }

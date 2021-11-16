@@ -3,55 +3,72 @@ const mongoose = require("mongoose");
 const StudentSchema = new mongoose.Schema(
   {
   studentname :{
-    type: String
+    type: String,
+    default: ""
   },
   studentemail :{
-    type: String
+    type: String,
+    default: ""
   },
   studentImg:{
-    type: String
+    type: String,
+    default: ""
   },
   fathername:{
-    type: String
+    type: String,
+    default: ""
   },
   fatherPhone:{
-    type: String
+    type: String,
+    default: ""
   },
   fatheroccupation :{
-    type: String
+    type: String,
+    default: ""
   },
   mothername:{
-    type: String
+    type: String,
+    default: ""
   },
   motherPhone:{
-    type: String
+    type: String,
+    default: ""
   },
   motheroccupation :{
-    type: String
+    type: String,
+    default: ""
   },
   password: {
-    type: String
+    type: String,
+    default: ""
   },
   email:{
-    type: String
+    type: String,
+    default: ""
   },
   username: {
-    type: String
+    type: String,
+    default: ""
   },
   dob: {
-    type: String
+    type: String,
+    default: ""
   },
   studentaddress: {
-    type: String
+    type: String,
+    default: ""
   },
   phone: {
-    type: String
+    type: String,
+    default: ""
   },
   offerringSubjects:{
-    type: Array
+    type: Array,
+    default: []
   },
   class: {
-    type: String
+    type: String,
+    default: ""
   }
   },
   { timestamps: true }
