@@ -43,7 +43,7 @@
   color: #eee;
 }
 
-@media (max-width: 8000px) {
+@media (max-width: 800px) {
   .whatContainer {
     flex-direction: column;
   }
