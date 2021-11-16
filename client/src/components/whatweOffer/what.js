@@ -7,8 +7,8 @@ const what = () => {
             <div className="whatHeader">
                 <h4>What we Offer</h4>
             </div>
-            <div className="whatContainer">
-                <Zoom right>
+            <Zoom right>
+                <div className="whatContainer">
                     <div className="cont">
                         <p className="title">Nursery Section</p>
                         <p>
@@ -27,8 +27,8 @@ const what = () => {
                             General Education provides students with transferrable skills that prepare them to gain knowledge, acquire new competencies, and broaden their perspectives so that they may better adapt to the needs of a changing society.
                         </p>
                     </div>
-                </Zoom>
-            </div>
+                </div>
+            </Zoom>
         </div>
     )
 }
