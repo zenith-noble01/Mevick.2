@@ -7,10 +7,12 @@ const SubjectSchema = new mongoose.Schema(
         require: true
     },
     subjectTeachers: {
-        type: Array
+        type: Array,
+        default: []
     },
     classesTaught: {
-        type: Array
+        type: Array,
+        default: []
     }
 },
     { timestamps: true }

@@ -7,6 +7,7 @@ import TeacherList from '../../pages/teacherlist/TeacherList'
 import Messages from '../../pages/messages/Messages'
 import Classes from '../Classes/Class'
 import { Timeline, PermIdentity, MailOutline, ChatBubbleOutline, Group, PostAdd, Class, School } from '@material-ui/icons'
+import Result from "../../pages/results/Result"
 const Sidebar = () => {
     const {path, url} = useRouteMatch()
     return (
@@ -55,11 +56,13 @@ const Sidebar = () => {
                     <ul className="sidebatList">
                         <li className="sidebarlinks">
                            <Link to={`${url}/post`} className="td">
-                               <PostAdd className="sidebarIcon" />To Official Site
+                               <PostAdd className="sidebarIcon" />News
                             </Link>
                         </li>
                         <li className="sidebarlinks">
-                        <Class className="sidebarIcon" />To Teachers
+                            <Link to={`${url}/result`} className="td">
+                                <Class className="sidebarIcon" />Result
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -83,6 +86,9 @@ const Sidebar = () => {
                     </Route>
                     <Route path={`${path}/classes`}>
                         <Classes />
+                    </Route>
+                    <Route path={`${path}/result`}>
+                        <Result />
                     </Route>
                 </Switch>
             </div>

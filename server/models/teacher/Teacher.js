@@ -16,15 +16,19 @@ const TeacherSchema = new mongoose.Schema(
     },
     teacherphone: {
       type: Number,
+      required: true
     },
     teacherclasses: {
         type: Array,
+        default: []
     },
     teacherSubject:{
-      type: String
+      type: String,
+      default: ""
     },
     teacherProfilePic: {
-      type: String
+      type: String,
+      default: ""
     }
   },
   { timestamps: true }

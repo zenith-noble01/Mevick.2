@@ -1,4 +1,4 @@
-import "./post.css"
+import "./result.css"
 import admin from '../../../images/secon1.jpg'
 import photo from '../../../images/photo.png'
 import {useState} from 'react'
