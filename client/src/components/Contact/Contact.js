@@ -21,7 +21,7 @@ const Contact = () => {
             subject: subject.current.value,
             message: message.current.value,
         }
-        await axios.post('http://localhost:5000/api/contact', mail);
+        await axios.post('https://mevick-moon.herokuapp.com/api/contact', mail);
 
         emailjs.sendForm('service_0xatvja', 'template_wb3necp', form.current, 'user_YQWZkeXOumjrAgisVJEqI')
         .then((result) => {
