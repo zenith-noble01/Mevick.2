@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./topbar.css"
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../images/logo.png'
+import { RiMenu3Line } from "react-icons/ri"
 
 const Topbar = () => {
 
@@ -65,7 +66,7 @@ const Topbar = () => {
       </div>
       <button className="topbarMenuIcon" onClick={() => 
         setIsMobile(!isMobile)}>
-        {isMobile ? <i className="fa fa-times"></i> : <i className="fa fa-bars"></i> }
+        {isMobile ? <i className="fa fa-times"></i> : <RiMenu3Line className="menubars"/> }
       </button>
     </div>
   )
