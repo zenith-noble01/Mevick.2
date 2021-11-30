@@ -1,5 +1,6 @@
 import "./apost.css"
 import logo from '../images/secon1.jpg'
+import { motion } from "framer-motion"
 
 
 const Apost = ({post}) => {
