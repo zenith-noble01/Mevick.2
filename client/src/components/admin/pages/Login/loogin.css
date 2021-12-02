@@ -83,6 +83,10 @@ color: whitesmoke;
   background: rgb(202, 201, 201);
 }
 
+.ParentForm button:disabled{
+  cursor: not-allowed;
+}
+
 .seen{
   display: none;
   text-align: center;

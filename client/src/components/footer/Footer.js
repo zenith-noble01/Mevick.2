@@ -57,7 +57,7 @@ const Footer = () => {
                             <input type="email" placeholder="Email"  className="colInput" required />
                         </div>
                         <div className="inputTainer">
-                            <i className="colFoot fa fa-phone"></i>
+                            <i className="colFoot fa fa-phone-alt"></i>
                             <input type="text" placeholder="Phone"  className="colInput" required />
                         </div>
                         <button type="submit" className="colBtn">Send</button>
