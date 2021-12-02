@@ -1,24 +1,24 @@
-import React, { useState } from "react" 
+import React, { useContext, useState } from "react" 
 import "./loogin.css"
 import {Visibility, VisibilityOff} from "@material-ui/icons"
+import { loginCall } from "../../../../api/adminApiCall"
+import { AdminAuthContext } from "../../../../AdminContext/AAuthContex"
+import { CircularProgress } from "@material-ui/core"
 
 const Login = () => {
 
     //CALLING THE DIFFERENT VARIABLES
-    const [password, setPassword] = useState(false)
-    const [name, setName] = useState("")
-    const [lock, setLock] = useState("")
+    const [lock, setLock] = useState(false)
+    const [adminname, setAdminName] = useState("")
+    const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
+    const {admin, isFetching, dispatch} = useContext(AdminAuthContext)
 
     //HANDLING THE LOGIN FUNCTION
     const handleLogin = (e)=>{
         e.preventDefault();
-        const info = {
-            name,
-            email,
-            lock
-        }
-        console.log(info);
+        loginCall({adminname, email, password}, dispatch)
+        console.log(admin); 
     }
     return (
         <div className="Alogin">
@@ -27,7 +27,7 @@ const Login = () => {
                 <form className="ParentForm" onSubmit={handleLogin}>
                     <div className="parentItem">
                         <label>Username</label>
-                        <input className="names" type="text" placeholder="mevick" required autoFocus="true" onChange={(e) =>setName(e.target.value)} />
+                        <input className="names" type="text" placeholder="mevick" required autoFocus="true" onChange={(e) =>setAdminName(e.target.value)} />
                     </div>
                     <div className="parentItem">
                         <label>Email</label>
@@ -35,10 +35,10 @@ const Login = () => {
                     </div>
                     <div className="parentItem">
                         <label>Password</label>
-                        <input className="names" type={!password ? "password" : "text"} required onChange={(e)=> setLock(e.target.value)} placeholder="Password" />
-                        {!password ? <Visibility className="eye" onClick={()=> setPassword(!password)}/> :   <VisibilityOff  className="eye" onClick={()=> setPassword    (!password)} />}
+                        <input className="names" type={!lock ? "password" : "text"} required onChange={(e)=> setPassword(e.target.value)} placeholder="Password" />
+                        {!lock ? <Visibility className="eye" onClick={()=> setLock(!lock)}/> :   <VisibilityOff  className="eye" onClick={()=> setLock(!lock)} />}
                     </div>
-                    <button>Sign In</button>
+                    <button disabled={isFetching}>{isFetching ? <CircularProgress size="20px" color="white"/> : "Sign In"}</button>
                 </form>
             </div>
             <div className="seen">
@@ -49,4 +49,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
